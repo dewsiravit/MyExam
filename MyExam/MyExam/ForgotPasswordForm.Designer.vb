@@ -19,184 +19,241 @@ Partial Class ForgotPasswordForm
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.UsernameTextBox = New System.Windows.Forms.TextBox()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.Button2 = New System.Windows.Forms.Button()
+        Me.NameLabel = New System.Windows.Forms.Label()
+        Me.NameTextBox = New System.Windows.Forms.TextBox()
+        Me.QuestionLabel = New System.Windows.Forms.Label()
+        Me.AnswerTextBox = New System.Windows.Forms.TextBox()
+        Me.SendAnswerButton = New System.Windows.Forms.Button()
         Me.LinkLabel1 = New System.Windows.Forms.LinkLabel()
-        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
+        Me.VerifyGroupBox = New System.Windows.Forms.GroupBox()
+        Me.ErrorAnswerLabel = New System.Windows.Forms.Label()
+        Me.ErrorNameLabel = New System.Windows.Forms.Label()
+        Me.NewPasswordLabel = New System.Windows.Forms.Label()
+        Me.NewPasswordTextBox = New System.Windows.Forms.TextBox()
+        Me.NewPasswordComfirmLabel = New System.Windows.Forms.Label()
+        Me.NewPasswordConfirmTextBox = New System.Windows.Forms.TextBox()
         Me.CancelButton = New System.Windows.Forms.Button()
+        Me.ChangePasswordGroupBox = New System.Windows.Forms.GroupBox()
+        Me.ErrorNewPasswordConfirmLabel = New System.Windows.Forms.Label()
+        Me.ErrorNewPasswordLabel = New System.Windows.Forms.Label()
         Me.ChangePasswordButton = New System.Windows.Forms.Button()
-        Me.GroupBox2 = New System.Windows.Forms.GroupBox()
-        Me.GroupBox1.SuspendLayout()
-        Me.GroupBox2.SuspendLayout()
+        Me.VerifyGroupBox.SuspendLayout()
+        Me.ChangePasswordGroupBox.SuspendLayout()
         Me.SuspendLayout()
         '
-        'Label1
+        'NameLabel
         '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(31, 27)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(57, 20)
-        Me.Label1.TabIndex = 0
-        Me.Label1.Text = "Label1"
+        Me.NameLabel.AutoSize = True
+        Me.NameLabel.Location = New System.Drawing.Point(112, 26)
+        Me.NameLabel.Name = "NameLabel"
+        Me.NameLabel.Size = New System.Drawing.Size(119, 20)
+        Me.NameLabel.TabIndex = 0
+        Me.NameLabel.Text = "ชื่อผู้ใช้ หรือ อีเมล์:"
         '
-        'UsernameTextBox
+        'NameTextBox
         '
-        Me.UsernameTextBox.Location = New System.Drawing.Point(94, 21)
-        Me.UsernameTextBox.Name = "UsernameTextBox"
-        Me.UsernameTextBox.Size = New System.Drawing.Size(142, 26)
-        Me.UsernameTextBox.TabIndex = 7
+        Me.NameTextBox.Location = New System.Drawing.Point(229, 23)
+        Me.NameTextBox.Name = "NameTextBox"
+        Me.NameTextBox.Size = New System.Drawing.Size(142, 26)
+        Me.NameTextBox.TabIndex = 7
         '
-        'Label2
+        'QuestionLabel
         '
-        Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(31, 68)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(57, 20)
-        Me.Label2.TabIndex = 9
-        Me.Label2.Text = "Label2"
+        Me.QuestionLabel.AutoSize = True
+        Me.QuestionLabel.Location = New System.Drawing.Point(112, 64)
+        Me.QuestionLabel.Name = "QuestionLabel"
+        Me.QuestionLabel.Size = New System.Drawing.Size(142, 20)
+        Me.QuestionLabel.TabIndex = 9
+        Me.QuestionLabel.Text = "คำถามเมื่อลืมรหัสผ่าน"
         '
-        'TextBox1
+        'AnswerTextBox
         '
-        Me.TextBox1.Location = New System.Drawing.Point(35, 103)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(201, 26)
-        Me.TextBox1.TabIndex = 10
+        Me.AnswerTextBox.Enabled = False
+        Me.AnswerTextBox.Location = New System.Drawing.Point(116, 100)
+        Me.AnswerTextBox.Name = "AnswerTextBox"
+        Me.AnswerTextBox.Size = New System.Drawing.Size(326, 26)
+        Me.AnswerTextBox.TabIndex = 10
         '
-        'Button2
+        'SendAnswerButton
         '
-        Me.Button2.AutoSize = True
-        Me.Button2.Location = New System.Drawing.Point(242, 101)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(76, 30)
-        Me.Button2.TabIndex = 11
-        Me.Button2.Text = "Button2"
-        Me.Button2.UseVisualStyleBackColor = True
+        Me.SendAnswerButton.AutoSize = True
+        Me.SendAnswerButton.Location = New System.Drawing.Point(468, 98)
+        Me.SendAnswerButton.Name = "SendAnswerButton"
+        Me.SendAnswerButton.Size = New System.Drawing.Size(76, 30)
+        Me.SendAnswerButton.TabIndex = 11
+        Me.SendAnswerButton.Text = "ส่งคำตอบ"
+        Me.SendAnswerButton.UseVisualStyleBackColor = True
         '
         'LinkLabel1
         '
         Me.LinkLabel1.AutoSize = True
-        Me.LinkLabel1.Location = New System.Drawing.Point(242, 27)
+        Me.LinkLabel1.Location = New System.Drawing.Point(377, 26)
         Me.LinkLabel1.Name = "LinkLabel1"
         Me.LinkLabel1.Size = New System.Drawing.Size(65, 20)
         Me.LinkLabel1.TabIndex = 12
         Me.LinkLabel1.TabStop = True
         Me.LinkLabel1.Text = "ตรวจสอบ"
         '
-        'GroupBox1
+        'VerifyGroupBox
         '
-        Me.GroupBox1.Controls.Add(Me.LinkLabel1)
-        Me.GroupBox1.Controls.Add(Me.Button2)
-        Me.GroupBox1.Controls.Add(Me.TextBox1)
-        Me.GroupBox1.Controls.Add(Me.Label2)
-        Me.GroupBox1.Controls.Add(Me.UsernameTextBox)
-        Me.GroupBox1.Controls.Add(Me.Label1)
-        Me.GroupBox1.Location = New System.Drawing.Point(76, 26)
-        Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(374, 154)
-        Me.GroupBox1.TabIndex = 13
-        Me.GroupBox1.TabStop = False
-        Me.GroupBox1.Text = "GroupBox1"
+        Me.VerifyGroupBox.Controls.Add(Me.ErrorAnswerLabel)
+        Me.VerifyGroupBox.Controls.Add(Me.ErrorNameLabel)
+        Me.VerifyGroupBox.Controls.Add(Me.LinkLabel1)
+        Me.VerifyGroupBox.Controls.Add(Me.SendAnswerButton)
+        Me.VerifyGroupBox.Controls.Add(Me.AnswerTextBox)
+        Me.VerifyGroupBox.Controls.Add(Me.QuestionLabel)
+        Me.VerifyGroupBox.Controls.Add(Me.NameTextBox)
+        Me.VerifyGroupBox.Controls.Add(Me.NameLabel)
+        Me.VerifyGroupBox.Location = New System.Drawing.Point(12, 12)
+        Me.VerifyGroupBox.Name = "VerifyGroupBox"
+        Me.VerifyGroupBox.Size = New System.Drawing.Size(660, 174)
+        Me.VerifyGroupBox.TabIndex = 13
+        Me.VerifyGroupBox.TabStop = False
+        Me.VerifyGroupBox.Text = "ยืนยันตัวตน"
         '
-        'Label3
+        'ErrorAnswerLabel
         '
-        Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(39, 24)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(57, 20)
-        Me.Label3.TabIndex = 14
-        Me.Label3.Text = "Label3"
+        Me.ErrorAnswerLabel.AutoSize = True
+        Me.ErrorAnswerLabel.ForeColor = System.Drawing.Color.Red
+        Me.ErrorAnswerLabel.Location = New System.Drawing.Point(112, 139)
+        Me.ErrorAnswerLabel.Name = "ErrorAnswerLabel"
+        Me.ErrorAnswerLabel.Size = New System.Drawing.Size(57, 20)
+        Me.ErrorAnswerLabel.TabIndex = 14
+        Me.ErrorAnswerLabel.Text = "Label1"
         '
-        'TextBox2
+        'ErrorNameLabel
         '
-        Me.TextBox2.Location = New System.Drawing.Point(123, 18)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(100, 26)
-        Me.TextBox2.TabIndex = 15
+        Me.ErrorNameLabel.AutoSize = True
+        Me.ErrorNameLabel.ForeColor = System.Drawing.Color.Red
+        Me.ErrorNameLabel.Location = New System.Drawing.Point(448, 26)
+        Me.ErrorNameLabel.Name = "ErrorNameLabel"
+        Me.ErrorNameLabel.Size = New System.Drawing.Size(57, 20)
+        Me.ErrorNameLabel.TabIndex = 13
+        Me.ErrorNameLabel.Text = "Label1"
         '
-        'Label4
+        'NewPasswordLabel
         '
-        Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(39, 69)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(57, 20)
-        Me.Label4.TabIndex = 16
-        Me.Label4.Text = "Label4"
+        Me.NewPasswordLabel.AutoSize = True
+        Me.NewPasswordLabel.Location = New System.Drawing.Point(143, 46)
+        Me.NewPasswordLabel.Name = "NewPasswordLabel"
+        Me.NewPasswordLabel.Size = New System.Drawing.Size(88, 20)
+        Me.NewPasswordLabel.TabIndex = 14
+        Me.NewPasswordLabel.Text = "รหัสผ่านใหม่:"
         '
-        'TextBox3
+        'NewPasswordTextBox
         '
-        Me.TextBox3.Location = New System.Drawing.Point(123, 66)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(100, 26)
-        Me.TextBox3.TabIndex = 17
+        Me.NewPasswordTextBox.Location = New System.Drawing.Point(246, 40)
+        Me.NewPasswordTextBox.Name = "NewPasswordTextBox"
+        Me.NewPasswordTextBox.Size = New System.Drawing.Size(192, 26)
+        Me.NewPasswordTextBox.TabIndex = 15
+        Me.NewPasswordTextBox.UseSystemPasswordChar = True
+        '
+        'NewPasswordComfirmLabel
+        '
+        Me.NewPasswordComfirmLabel.AutoSize = True
+        Me.NewPasswordComfirmLabel.Location = New System.Drawing.Point(105, 91)
+        Me.NewPasswordComfirmLabel.Name = "NewPasswordComfirmLabel"
+        Me.NewPasswordComfirmLabel.Size = New System.Drawing.Size(126, 20)
+        Me.NewPasswordComfirmLabel.TabIndex = 16
+        Me.NewPasswordComfirmLabel.Text = "ยืนยัน รหัสผ่านใหม่:"
+        '
+        'NewPasswordConfirmTextBox
+        '
+        Me.NewPasswordConfirmTextBox.Location = New System.Drawing.Point(246, 88)
+        Me.NewPasswordConfirmTextBox.Name = "NewPasswordConfirmTextBox"
+        Me.NewPasswordConfirmTextBox.Size = New System.Drawing.Size(192, 26)
+        Me.NewPasswordConfirmTextBox.TabIndex = 17
+        Me.NewPasswordConfirmTextBox.UseSystemPasswordChar = True
         '
         'CancelButton
         '
         Me.CancelButton.DialogResult = System.Windows.Forms.DialogResult.Cancel
-        Me.CancelButton.Location = New System.Drawing.Point(229, 117)
+        Me.CancelButton.Location = New System.Drawing.Point(278, 413)
         Me.CancelButton.Name = "CancelButton"
-        Me.CancelButton.Size = New System.Drawing.Size(146, 56)
+        Me.CancelButton.Size = New System.Drawing.Size(91, 36)
         Me.CancelButton.TabIndex = 19
         Me.CancelButton.Text = "ยกเลิก"
         Me.CancelButton.UseVisualStyleBackColor = True
         '
+        'ChangePasswordGroupBox
+        '
+        Me.ChangePasswordGroupBox.Controls.Add(Me.ErrorNewPasswordConfirmLabel)
+        Me.ChangePasswordGroupBox.Controls.Add(Me.ErrorNewPasswordLabel)
+        Me.ChangePasswordGroupBox.Controls.Add(Me.ChangePasswordButton)
+        Me.ChangePasswordGroupBox.Controls.Add(Me.NewPasswordConfirmTextBox)
+        Me.ChangePasswordGroupBox.Controls.Add(Me.NewPasswordComfirmLabel)
+        Me.ChangePasswordGroupBox.Controls.Add(Me.NewPasswordTextBox)
+        Me.ChangePasswordGroupBox.Controls.Add(Me.NewPasswordLabel)
+        Me.ChangePasswordGroupBox.Location = New System.Drawing.Point(12, 192)
+        Me.ChangePasswordGroupBox.Name = "ChangePasswordGroupBox"
+        Me.ChangePasswordGroupBox.Size = New System.Drawing.Size(660, 215)
+        Me.ChangePasswordGroupBox.TabIndex = 20
+        Me.ChangePasswordGroupBox.TabStop = False
+        Me.ChangePasswordGroupBox.Text = "เปลี่ยนรหัสผ่าน"
+        '
+        'ErrorNewPasswordConfirmLabel
+        '
+        Me.ErrorNewPasswordConfirmLabel.AutoSize = True
+        Me.ErrorNewPasswordConfirmLabel.ForeColor = System.Drawing.Color.Red
+        Me.ErrorNewPasswordConfirmLabel.Location = New System.Drawing.Point(444, 91)
+        Me.ErrorNewPasswordConfirmLabel.Name = "ErrorNewPasswordConfirmLabel"
+        Me.ErrorNewPasswordConfirmLabel.Size = New System.Drawing.Size(57, 20)
+        Me.ErrorNewPasswordConfirmLabel.TabIndex = 20
+        Me.ErrorNewPasswordConfirmLabel.Text = "Label3"
+        '
+        'ErrorNewPasswordLabel
+        '
+        Me.ErrorNewPasswordLabel.AutoSize = True
+        Me.ErrorNewPasswordLabel.ForeColor = System.Drawing.Color.Red
+        Me.ErrorNewPasswordLabel.Location = New System.Drawing.Point(444, 43)
+        Me.ErrorNewPasswordLabel.Name = "ErrorNewPasswordLabel"
+        Me.ErrorNewPasswordLabel.Size = New System.Drawing.Size(57, 20)
+        Me.ErrorNewPasswordLabel.TabIndex = 19
+        Me.ErrorNewPasswordLabel.Text = "Label2"
+        '
         'ChangePasswordButton
         '
-        Me.ChangePasswordButton.Location = New System.Drawing.Point(55, 117)
+        Me.ChangePasswordButton.AutoSize = True
+        Me.ChangePasswordButton.Location = New System.Drawing.Point(246, 150)
         Me.ChangePasswordButton.Name = "ChangePasswordButton"
-        Me.ChangePasswordButton.Size = New System.Drawing.Size(146, 56)
+        Me.ChangePasswordButton.Size = New System.Drawing.Size(108, 30)
         Me.ChangePasswordButton.TabIndex = 18
         Me.ChangePasswordButton.Text = "เปลี่ยนรหัสผ่าน"
         Me.ChangePasswordButton.UseVisualStyleBackColor = True
-        '
-        'GroupBox2
-        '
-        Me.GroupBox2.Controls.Add(Me.CancelButton)
-        Me.GroupBox2.Controls.Add(Me.ChangePasswordButton)
-        Me.GroupBox2.Controls.Add(Me.TextBox3)
-        Me.GroupBox2.Controls.Add(Me.Label4)
-        Me.GroupBox2.Controls.Add(Me.TextBox2)
-        Me.GroupBox2.Controls.Add(Me.Label3)
-        Me.GroupBox2.Location = New System.Drawing.Point(75, 192)
-        Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(432, 207)
-        Me.GroupBox2.TabIndex = 20
-        Me.GroupBox2.TabStop = False
-        Me.GroupBox2.Text = "GroupBox2"
         '
         'ForgotPasswordForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.ClientSize = New System.Drawing.Size(684, 461)
-        Me.Controls.Add(Me.GroupBox2)
-        Me.Controls.Add(Me.GroupBox1)
+        Me.Controls.Add(Me.CancelButton)
+        Me.Controls.Add(Me.ChangePasswordGroupBox)
+        Me.Controls.Add(Me.VerifyGroupBox)
         Me.Name = "ForgotPasswordForm"
-        Me.GroupBox1.ResumeLayout(False)
-        Me.GroupBox1.PerformLayout()
-        Me.GroupBox2.ResumeLayout(False)
-        Me.GroupBox2.PerformLayout()
+        Me.Text = "ลืมรหัสผ่าน"
+        Me.VerifyGroupBox.ResumeLayout(False)
+        Me.VerifyGroupBox.PerformLayout()
+        Me.ChangePasswordGroupBox.ResumeLayout(False)
+        Me.ChangePasswordGroupBox.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
 
-    Friend WithEvents Label1 As Label
-    Friend WithEvents UsernameTextBox As TextBox
-    Friend WithEvents Label2 As Label
-    Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents Button2 As Button
+    Friend WithEvents NameLabel As Label
+    Friend WithEvents NameTextBox As TextBox
+    Friend WithEvents QuestionLabel As Label
+    Friend WithEvents AnswerTextBox As TextBox
+    Friend WithEvents SendAnswerButton As Button
     Friend WithEvents LinkLabel1 As LinkLabel
-    Friend WithEvents GroupBox1 As GroupBox
-    Friend WithEvents Label3 As Label
-    Friend WithEvents TextBox2 As TextBox
-    Friend WithEvents Label4 As Label
-    Friend WithEvents TextBox3 As TextBox
+    Friend WithEvents VerifyGroupBox As GroupBox
+    Friend WithEvents NewPasswordLabel As Label
+    Friend WithEvents NewPasswordTextBox As TextBox
+    Friend WithEvents NewPasswordComfirmLabel As Label
+    Friend WithEvents NewPasswordConfirmTextBox As TextBox
     Friend WithEvents CancelButton As Button
+    Friend WithEvents ChangePasswordGroupBox As GroupBox
     Friend WithEvents ChangePasswordButton As Button
-    Friend WithEvents GroupBox2 As GroupBox
+    Friend WithEvents ErrorAnswerLabel As Label
+    Friend WithEvents ErrorNameLabel As Label
+    Friend WithEvents ErrorNewPasswordConfirmLabel As Label
+    Friend WithEvents ErrorNewPasswordLabel As Label
 End Class
