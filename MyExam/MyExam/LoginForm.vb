@@ -1,6 +1,7 @@
 ﻿Public Class LoginForm
 
     Private Sub OK_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles OK.Click
+        MainForm.Show()
         Close()
     End Sub
 
