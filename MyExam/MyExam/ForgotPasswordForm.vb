@@ -23,4 +23,8 @@
         ErrorNewPasswordConfirmLabel.Text = ""
         ChangePasswordGroupBox.Visible = False
     End Sub
+
+    Private Sub QuestionLabel_Click(sender As Object, e As EventArgs) Handles QuestionLabel.Click
+        AnswerTextBox.Focus()
+    End Sub
 End Class

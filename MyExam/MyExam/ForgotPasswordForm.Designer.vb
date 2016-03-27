@@ -229,7 +229,7 @@ Partial Class ForgotPasswordForm
         Me.Controls.Add(Me.ChangePasswordGroupBox)
         Me.Controls.Add(Me.VerifyGroupBox)
         Me.Name = "ForgotPasswordForm"
-        Me.Text = "ลืมรหัสผ่าน"
+        Me.Text = "ลืมรหัสผ่าน - MyExam"
         Me.VerifyGroupBox.ResumeLayout(False)
         Me.VerifyGroupBox.PerformLayout()
         Me.ChangePasswordGroupBox.ResumeLayout(False)
