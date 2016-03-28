@@ -77,6 +77,7 @@ Partial Class ForgotPasswordForm
         'SendAnswerButton
         '
         Me.SendAnswerButton.AutoSize = True
+        Me.SendAnswerButton.Enabled = False
         Me.SendAnswerButton.Location = New System.Drawing.Point(468, 98)
         Me.SendAnswerButton.Name = "SendAnswerButton"
         Me.SendAnswerButton.Size = New System.Drawing.Size(76, 30)
