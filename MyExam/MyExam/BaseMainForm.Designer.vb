@@ -22,6 +22,7 @@ Partial Class BaseMainForm
         Me.LogoutLinkLabel = New System.Windows.Forms.LinkLabel()
         Me.ProfileLinkLabel = New System.Windows.Forms.LinkLabel()
         Me.WelcomeLabel = New System.Windows.Forms.Label()
+        Me.MainLinkLabel = New System.Windows.Forms.LinkLabel()
         Me.SuspendLayout()
         '
         'LogoutLinkLabel
@@ -53,10 +54,21 @@ Partial Class BaseMainForm
         Me.WelcomeLabel.TabIndex = 3
         Me.WelcomeLabel.Text = "ยินดีต้อนรับ xxxx"
         '
+        'MainLinkLabel
+        '
+        Me.MainLinkLabel.AutoSize = True
+        Me.MainLinkLabel.Location = New System.Drawing.Point(426, 9)
+        Me.MainLinkLabel.Name = "MainLinkLabel"
+        Me.MainLinkLabel.Size = New System.Drawing.Size(60, 20)
+        Me.MainLinkLabel.TabIndex = 6
+        Me.MainLinkLabel.TabStop = True
+        Me.MainLinkLabel.Text = "หน้าหลัก"
+        '
         'BaseMainForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.ClientSize = New System.Drawing.Size(684, 461)
+        Me.Controls.Add(Me.MainLinkLabel)
         Me.Controls.Add(Me.LogoutLinkLabel)
         Me.Controls.Add(Me.ProfileLinkLabel)
         Me.Controls.Add(Me.WelcomeLabel)
@@ -69,4 +81,5 @@ Partial Class BaseMainForm
     Friend WithEvents LogoutLinkLabel As LinkLabel
     Friend WithEvents ProfileLinkLabel As LinkLabel
     Friend WithEvents WelcomeLabel As Label
+    Friend WithEvents MainLinkLabel As LinkLabel
 End Class

@@ -91,6 +91,12 @@
     <Compile Include="BaseMainForm.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="CreateForm.Designer.vb">
+      <DependentUpon>CreateForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CreateForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="ForgotPasswordForm.Designer.vb">
       <DependentUpon>ForgotPasswordForm.vb</DependentUpon>
     </Compile>
@@ -137,6 +143,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="BaseMainForm.resx">
       <DependentUpon>BaseMainForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CreateForm.resx">
+      <DependentUpon>CreateForm.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ForgotPasswordForm.resx">
       <DependentUpon>ForgotPasswordForm.vb</DependentUpon>

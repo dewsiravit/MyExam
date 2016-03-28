@@ -26,7 +26,7 @@ Partial Class MainForm
         Me.NameRadioButton = New System.Windows.Forms.RadioButton()
         Me.SearchButton = New System.Windows.Forms.Button()
         Me.SearchTextBox = New System.Windows.Forms.TextBox()
-        Me.CreatButton = New System.Windows.Forms.Button()
+        Me.CreateButton = New System.Windows.Forms.Button()
         Me.ListView = New System.Windows.Forms.ListView()
         Me.NameColumnHeader = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.TypeColumnHeader = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
@@ -109,15 +109,15 @@ Partial Class MainForm
         Me.SearchTextBox.Size = New System.Drawing.Size(489, 26)
         Me.SearchTextBox.TabIndex = 0
         '
-        'CreatButton
+        'CreateButton
         '
-        Me.CreatButton.AutoSize = True
-        Me.CreatButton.Location = New System.Drawing.Point(271, 12)
-        Me.CreatButton.Name = "CreatButton"
-        Me.CreatButton.Size = New System.Drawing.Size(119, 30)
-        Me.CreatButton.TabIndex = 6
-        Me.CreatButton.Text = "สร้างแบบทดสอบ"
-        Me.CreatButton.UseVisualStyleBackColor = True
+        Me.CreateButton.AutoSize = True
+        Me.CreateButton.Location = New System.Drawing.Point(271, 12)
+        Me.CreateButton.Name = "CreateButton"
+        Me.CreateButton.Size = New System.Drawing.Size(119, 30)
+        Me.CreateButton.TabIndex = 6
+        Me.CreateButton.Text = "สร้างแบบทดสอบ"
+        Me.CreateButton.UseVisualStyleBackColor = True
         '
         'ListView
         '
@@ -155,10 +155,10 @@ Partial Class MainForm
         Me.ClientSize = New System.Drawing.Size(684, 461)
         Me.Controls.Add(Me.ListView)
         Me.Controls.Add(Me.SearchGroupBox)
-        Me.Controls.Add(Me.CreatButton)
+        Me.Controls.Add(Me.CreateButton)
         Me.Name = "MainForm"
         Me.Text = "MyExam"
-        Me.Controls.SetChildIndex(Me.CreatButton, 0)
+        Me.Controls.SetChildIndex(Me.CreateButton, 0)
         Me.Controls.SetChildIndex(Me.SearchGroupBox, 0)
         Me.Controls.SetChildIndex(Me.ListView, 0)
         Me.SearchGroupBox.ResumeLayout(False)
@@ -174,7 +174,7 @@ Partial Class MainForm
     Friend WithEvents NameRadioButton As RadioButton
     Friend WithEvents SearchButton As Button
     Friend WithEvents SearchTextBox As TextBox
-    Friend WithEvents CreatButton As Button
+    Friend WithEvents CreateButton As Button
     Friend WithEvents ListView As ListView
     Friend WithEvents NameColumnHeader As ColumnHeader
     Friend WithEvents TypeColumnHeader As ColumnHeader
