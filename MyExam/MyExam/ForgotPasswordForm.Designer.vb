@@ -24,7 +24,7 @@ Partial Class ForgotPasswordForm
         Me.QuestionLabel = New System.Windows.Forms.Label()
         Me.AnswerTextBox = New System.Windows.Forms.TextBox()
         Me.SendAnswerButton = New System.Windows.Forms.Button()
-        Me.LinkLabel1 = New System.Windows.Forms.LinkLabel()
+        Me.CheckNameLinkLabel = New System.Windows.Forms.LinkLabel()
         Me.VerifyGroupBox = New System.Windows.Forms.GroupBox()
         Me.ErrorAnswerLabel = New System.Windows.Forms.Label()
         Me.ErrorNameLabel = New System.Windows.Forms.Label()
@@ -77,6 +77,7 @@ Partial Class ForgotPasswordForm
         'SendAnswerButton
         '
         Me.SendAnswerButton.AutoSize = True
+        Me.SendAnswerButton.DialogResult = System.Windows.Forms.DialogResult.Cancel
         Me.SendAnswerButton.Enabled = False
         Me.SendAnswerButton.Location = New System.Drawing.Point(468, 98)
         Me.SendAnswerButton.Name = "SendAnswerButton"
@@ -85,21 +86,21 @@ Partial Class ForgotPasswordForm
         Me.SendAnswerButton.Text = "ส่งคำตอบ"
         Me.SendAnswerButton.UseVisualStyleBackColor = True
         '
-        'LinkLabel1
+        'CheckNameLinkLabel
         '
-        Me.LinkLabel1.AutoSize = True
-        Me.LinkLabel1.Location = New System.Drawing.Point(377, 26)
-        Me.LinkLabel1.Name = "LinkLabel1"
-        Me.LinkLabel1.Size = New System.Drawing.Size(65, 20)
-        Me.LinkLabel1.TabIndex = 12
-        Me.LinkLabel1.TabStop = True
-        Me.LinkLabel1.Text = "ตรวจสอบ"
+        Me.CheckNameLinkLabel.AutoSize = True
+        Me.CheckNameLinkLabel.Location = New System.Drawing.Point(377, 26)
+        Me.CheckNameLinkLabel.Name = "CheckNameLinkLabel"
+        Me.CheckNameLinkLabel.Size = New System.Drawing.Size(65, 20)
+        Me.CheckNameLinkLabel.TabIndex = 12
+        Me.CheckNameLinkLabel.TabStop = True
+        Me.CheckNameLinkLabel.Text = "ตรวจสอบ"
         '
         'VerifyGroupBox
         '
         Me.VerifyGroupBox.Controls.Add(Me.ErrorAnswerLabel)
         Me.VerifyGroupBox.Controls.Add(Me.ErrorNameLabel)
-        Me.VerifyGroupBox.Controls.Add(Me.LinkLabel1)
+        Me.VerifyGroupBox.Controls.Add(Me.CheckNameLinkLabel)
         Me.VerifyGroupBox.Controls.Add(Me.SendAnswerButton)
         Me.VerifyGroupBox.Controls.Add(Me.AnswerTextBox)
         Me.VerifyGroupBox.Controls.Add(Me.QuestionLabel)
@@ -225,6 +226,7 @@ Partial Class ForgotPasswordForm
         'ForgotPasswordForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
+        Me.CancelButton = Me.CancelButton
         Me.ClientSize = New System.Drawing.Size(684, 461)
         Me.Controls.Add(Me.CancelButton)
         Me.Controls.Add(Me.ChangePasswordGroupBox)
@@ -244,7 +246,7 @@ Partial Class ForgotPasswordForm
     Friend WithEvents QuestionLabel As Label
     Friend WithEvents AnswerTextBox As TextBox
     Friend WithEvents SendAnswerButton As Button
-    Friend WithEvents LinkLabel1 As LinkLabel
+    Friend WithEvents CheckNameLinkLabel As LinkLabel
     Friend WithEvents VerifyGroupBox As GroupBox
     Friend WithEvents NewPasswordLabel As Label
     Friend WithEvents NewPasswordTextBox As TextBox

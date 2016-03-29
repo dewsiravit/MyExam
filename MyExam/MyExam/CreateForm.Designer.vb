@@ -39,11 +39,11 @@ Partial Class CreateForm
         Me.NextButton = New System.Windows.Forms.Button()
         Me.CancelButton = New System.Windows.Forms.Button()
         Me.CreateGroupBox = New System.Windows.Forms.GroupBox()
+        Me.ErrorAddInformationLabel = New System.Windows.Forms.Label()
+        Me.ErrorNameLabel = New System.Windows.Forms.Label()
         Me.Panel = New System.Windows.Forms.Panel()
         Me.VisiblePinLinkLabel = New System.Windows.Forms.LinkLabel()
         Me.TimeLimitPanel = New System.Windows.Forms.Panel()
-        Me.ErrorNameLabel = New System.Windows.Forms.Label()
-        Me.ErrorAddInformationLabel = New System.Windows.Forms.Label()
         Me.CreateGroupBox.SuspendLayout()
         Me.Panel.SuspendLayout()
         Me.TimeLimitPanel.SuspendLayout()
@@ -181,6 +181,7 @@ Partial Class CreateForm
         '
         'InformationCheckedListBox
         '
+        Me.InformationCheckedListBox.CheckOnClick = True
         Me.InformationCheckedListBox.FormattingEnabled = True
         Me.InformationCheckedListBox.Items.AddRange(New Object() {"ชื่อผู้ใช้", "ชื่อ", "นามสกุล", "เลขประจำตัว"})
         Me.InformationCheckedListBox.Location = New System.Drawing.Point(125, 166)
@@ -246,6 +247,26 @@ Partial Class CreateForm
         Me.CreateGroupBox.TabIndex = 25
         Me.CreateGroupBox.TabStop = False
         '
+        'ErrorAddInformationLabel
+        '
+        Me.ErrorAddInformationLabel.AutoSize = True
+        Me.ErrorAddInformationLabel.ForeColor = System.Drawing.Color.Red
+        Me.ErrorAddInformationLabel.Location = New System.Drawing.Point(384, 284)
+        Me.ErrorAddInformationLabel.Name = "ErrorAddInformationLabel"
+        Me.ErrorAddInformationLabel.Size = New System.Drawing.Size(57, 20)
+        Me.ErrorAddInformationLabel.TabIndex = 26
+        Me.ErrorAddInformationLabel.Text = "Label1"
+        '
+        'ErrorNameLabel
+        '
+        Me.ErrorNameLabel.AutoSize = True
+        Me.ErrorNameLabel.ForeColor = System.Drawing.Color.Red
+        Me.ErrorNameLabel.Location = New System.Drawing.Point(126, 14)
+        Me.ErrorNameLabel.Name = "ErrorNameLabel"
+        Me.ErrorNameLabel.Size = New System.Drawing.Size(57, 20)
+        Me.ErrorNameLabel.TabIndex = 25
+        Me.ErrorNameLabel.Text = "Label1"
+        '
         'Panel
         '
         Me.Panel.Controls.Add(Me.VisiblePinLinkLabel)
@@ -253,9 +274,9 @@ Partial Class CreateForm
         Me.Panel.Controls.Add(Me.PublicRadioButton)
         Me.Panel.Controls.Add(Me.AccessLabel)
         Me.Panel.Controls.Add(Me.PinTextBox)
-        Me.Panel.Location = New System.Drawing.Point(15, 71)
+        Me.Panel.Location = New System.Drawing.Point(14, 71)
         Me.Panel.Name = "Panel"
-        Me.Panel.Size = New System.Drawing.Size(623, 42)
+        Me.Panel.Size = New System.Drawing.Size(624, 42)
         Me.Panel.TabIndex = 24
         '
         'VisiblePinLinkLabel
@@ -279,26 +300,6 @@ Partial Class CreateForm
         Me.TimeLimitPanel.Name = "TimeLimitPanel"
         Me.TimeLimitPanel.Size = New System.Drawing.Size(623, 42)
         Me.TimeLimitPanel.TabIndex = 23
-        '
-        'ErrorNameLabel
-        '
-        Me.ErrorNameLabel.AutoSize = True
-        Me.ErrorNameLabel.ForeColor = System.Drawing.Color.Red
-        Me.ErrorNameLabel.Location = New System.Drawing.Point(126, 14)
-        Me.ErrorNameLabel.Name = "ErrorNameLabel"
-        Me.ErrorNameLabel.Size = New System.Drawing.Size(57, 20)
-        Me.ErrorNameLabel.TabIndex = 25
-        Me.ErrorNameLabel.Text = "Label1"
-        '
-        'ErrorAddInformationLabel
-        '
-        Me.ErrorAddInformationLabel.AutoSize = True
-        Me.ErrorAddInformationLabel.ForeColor = System.Drawing.Color.Red
-        Me.ErrorAddInformationLabel.Location = New System.Drawing.Point(384, 284)
-        Me.ErrorAddInformationLabel.Name = "ErrorAddInformationLabel"
-        Me.ErrorAddInformationLabel.Size = New System.Drawing.Size(57, 20)
-        Me.ErrorAddInformationLabel.TabIndex = 26
-        Me.ErrorAddInformationLabel.Text = "Label1"
         '
         'CreateForm
         '
