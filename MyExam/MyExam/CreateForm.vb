@@ -84,4 +84,9 @@
             ErrorAddInformationLabel.Text = ex.Message
         End Try
     End Sub
+
+    Private Sub NextButton_Click(sender As Object, e As EventArgs) Handles NextButton.Click
+        CreateChoiceForm.Show()
+        Close()
+    End Sub
 End Class
