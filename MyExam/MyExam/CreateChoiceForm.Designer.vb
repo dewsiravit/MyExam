@@ -201,6 +201,7 @@ Partial Class CreateChoiceForm
         Me.Controls.Add(Me.QurstionTextBox)
         Me.Controls.Add(Me.NumberLabel)
         Me.Name = "CreateChoiceForm"
+        Me.Text = "แบบทดสอบ เลือกตอบ - MyExam"
         Me.Controls.SetChildIndex(Me.NumberLabel, 0)
         Me.Controls.SetChildIndex(Me.QurstionTextBox, 0)
         Me.Controls.SetChildIndex(Me.ChoiceATextBox, 0)
