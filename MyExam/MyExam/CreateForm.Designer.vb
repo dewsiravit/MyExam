@@ -38,12 +38,19 @@ Partial Class CreateForm
         Me.AddInformaionButton = New System.Windows.Forms.Button()
         Me.NextButton = New System.Windows.Forms.Button()
         Me.CancelButton = New System.Windows.Forms.Button()
+        Me.CreateGroupBox = New System.Windows.Forms.GroupBox()
+        Me.Panel = New System.Windows.Forms.Panel()
+        Me.VisiblePinLinkLabel = New System.Windows.Forms.LinkLabel()
+        Me.TimeLimitPanel = New System.Windows.Forms.Panel()
+        Me.CreateGroupBox.SuspendLayout()
+        Me.Panel.SuspendLayout()
+        Me.TimeLimitPanel.SuspendLayout()
         Me.SuspendLayout()
         '
         'NameLabel
         '
         Me.NameLabel.AutoSize = True
-        Me.NameLabel.Location = New System.Drawing.Point(30, 64)
+        Me.NameLabel.Location = New System.Drawing.Point(17, 24)
         Me.NameLabel.Name = "NameLabel"
         Me.NameLabel.Size = New System.Drawing.Size(101, 20)
         Me.NameLabel.TabIndex = 6
@@ -51,7 +58,7 @@ Partial Class CreateForm
         '
         'NameTextBox
         '
-        Me.NameTextBox.Location = New System.Drawing.Point(137, 61)
+        Me.NameTextBox.Location = New System.Drawing.Point(124, 21)
         Me.NameTextBox.Name = "NameTextBox"
         Me.NameTextBox.Size = New System.Drawing.Size(323, 26)
         Me.NameTextBox.TabIndex = 7
@@ -59,7 +66,7 @@ Partial Class CreateForm
         'TypeLabel
         '
         Me.TypeLabel.AutoSize = True
-        Me.TypeLabel.Location = New System.Drawing.Point(466, 64)
+        Me.TypeLabel.Location = New System.Drawing.Point(453, 24)
         Me.TypeLabel.Name = "TypeLabel"
         Me.TypeLabel.Size = New System.Drawing.Size(57, 20)
         Me.TypeLabel.TabIndex = 8
@@ -70,7 +77,7 @@ Partial Class CreateForm
         Me.TypeComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.TypeComboBox.FormattingEnabled = True
         Me.TypeComboBox.Items.AddRange(New Object() {"เลือกคำตอบ", "เติมคำตอบ", "เขียนคำตอบ", "จับคู่", "ถูกผิด"})
-        Me.TypeComboBox.Location = New System.Drawing.Point(529, 61)
+        Me.TypeComboBox.Location = New System.Drawing.Point(516, 21)
         Me.TypeComboBox.Name = "TypeComboBox"
         Me.TypeComboBox.Size = New System.Drawing.Size(121, 28)
         Me.TypeComboBox.TabIndex = 9
@@ -78,7 +85,7 @@ Partial Class CreateForm
         'AccessLabel
         '
         Me.AccessLabel.AutoSize = True
-        Me.AccessLabel.Location = New System.Drawing.Point(30, 108)
+        Me.AccessLabel.Location = New System.Drawing.Point(7, 14)
         Me.AccessLabel.Name = "AccessLabel"
         Me.AccessLabel.Size = New System.Drawing.Size(145, 20)
         Me.AccessLabel.TabIndex = 10
@@ -87,7 +94,7 @@ Partial Class CreateForm
         'PublicRadioButton
         '
         Me.PublicRadioButton.AutoSize = True
-        Me.PublicRadioButton.Location = New System.Drawing.Point(181, 106)
+        Me.PublicRadioButton.Location = New System.Drawing.Point(158, 12)
         Me.PublicRadioButton.Name = "PublicRadioButton"
         Me.PublicRadioButton.Size = New System.Drawing.Size(83, 24)
         Me.PublicRadioButton.TabIndex = 11
@@ -98,7 +105,7 @@ Partial Class CreateForm
         'OnlyPinRadioButton
         '
         Me.OnlyPinRadioButton.AutoSize = True
-        Me.OnlyPinRadioButton.Location = New System.Drawing.Point(270, 106)
+        Me.OnlyPinRadioButton.Location = New System.Drawing.Point(247, 12)
         Me.OnlyPinRadioButton.Name = "OnlyPinRadioButton"
         Me.OnlyPinRadioButton.Size = New System.Drawing.Size(120, 24)
         Me.OnlyPinRadioButton.TabIndex = 12
@@ -109,16 +116,15 @@ Partial Class CreateForm
         'PinTextBox
         '
         Me.PinTextBox.ForeColor = System.Drawing.SystemColors.WindowFrame
-        Me.PinTextBox.Location = New System.Drawing.Point(396, 105)
+        Me.PinTextBox.Location = New System.Drawing.Point(368, 11)
         Me.PinTextBox.Name = "PinTextBox"
-        Me.PinTextBox.Size = New System.Drawing.Size(254, 26)
+        Me.PinTextBox.Size = New System.Drawing.Size(128, 26)
         Me.PinTextBox.TabIndex = 13
-        Me.PinTextBox.Text = "กำหนดรหัสเพื่อเข้าถึงแบบทดสอบ"
         '
         'LimitTimeLabel
         '
         Me.LimitTimeLabel.AutoSize = True
-        Me.LimitTimeLabel.Location = New System.Drawing.Point(30, 147)
+        Me.LimitTimeLabel.Location = New System.Drawing.Point(4, 10)
         Me.LimitTimeLabel.Name = "LimitTimeLabel"
         Me.LimitTimeLabel.Size = New System.Drawing.Size(165, 20)
         Me.LimitTimeLabel.TabIndex = 14
@@ -126,7 +132,7 @@ Partial Class CreateForm
         '
         'TimeTextBox
         '
-        Me.TimeTextBox.Location = New System.Drawing.Point(422, 144)
+        Me.TimeTextBox.Location = New System.Drawing.Point(396, 7)
         Me.TimeTextBox.Name = "TimeTextBox"
         Me.TimeTextBox.Size = New System.Drawing.Size(43, 26)
         Me.TimeTextBox.TabIndex = 15
@@ -134,7 +140,7 @@ Partial Class CreateForm
         'MinuteLabel
         '
         Me.MinuteLabel.AutoSize = True
-        Me.MinuteLabel.Location = New System.Drawing.Point(471, 147)
+        Me.MinuteLabel.Location = New System.Drawing.Point(445, 10)
         Me.MinuteLabel.Name = "MinuteLabel"
         Me.MinuteLabel.Size = New System.Drawing.Size(35, 20)
         Me.MinuteLabel.TabIndex = 16
@@ -143,7 +149,7 @@ Partial Class CreateForm
         'NoLimitRadioButton
         '
         Me.NoLimitRadioButton.AutoSize = True
-        Me.NoLimitRadioButton.Location = New System.Drawing.Point(199, 145)
+        Me.NoLimitRadioButton.Location = New System.Drawing.Point(173, 8)
         Me.NoLimitRadioButton.Name = "NoLimitRadioButton"
         Me.NoLimitRadioButton.Size = New System.Drawing.Size(115, 24)
         Me.NoLimitRadioButton.TabIndex = 17
@@ -154,7 +160,7 @@ Partial Class CreateForm
         'LimitTimeRadioButton
         '
         Me.LimitTimeRadioButton.AutoSize = True
-        Me.LimitTimeRadioButton.Location = New System.Drawing.Point(320, 145)
+        Me.LimitTimeRadioButton.Location = New System.Drawing.Point(294, 8)
         Me.LimitTimeRadioButton.Name = "LimitTimeRadioButton"
         Me.LimitTimeRadioButton.Size = New System.Drawing.Size(98, 24)
         Me.LimitTimeRadioButton.TabIndex = 18
@@ -165,7 +171,7 @@ Partial Class CreateForm
         'InformationLabel
         '
         Me.InformationLabel.AutoSize = True
-        Me.InformationLabel.Location = New System.Drawing.Point(30, 190)
+        Me.InformationLabel.Location = New System.Drawing.Point(17, 150)
         Me.InformationLabel.Name = "InformationLabel"
         Me.InformationLabel.Size = New System.Drawing.Size(104, 20)
         Me.InformationLabel.TabIndex = 19
@@ -175,14 +181,14 @@ Partial Class CreateForm
         '
         Me.InformationCheckedListBox.FormattingEnabled = True
         Me.InformationCheckedListBox.Items.AddRange(New Object() {"ชื่อผู้ใช้", "ชื่อ", "นามสกุล", "เลขประจำตัว"})
-        Me.InformationCheckedListBox.Location = New System.Drawing.Point(137, 190)
+        Me.InformationCheckedListBox.Location = New System.Drawing.Point(124, 150)
         Me.InformationCheckedListBox.Name = "InformationCheckedListBox"
         Me.InformationCheckedListBox.Size = New System.Drawing.Size(513, 109)
         Me.InformationCheckedListBox.TabIndex = 20
         '
         'AddInformationTextBox
         '
-        Me.AddInformationTextBox.Location = New System.Drawing.Point(137, 305)
+        Me.AddInformationTextBox.Location = New System.Drawing.Point(124, 265)
         Me.AddInformationTextBox.Name = "AddInformationTextBox"
         Me.AddInformationTextBox.Size = New System.Drawing.Size(202, 26)
         Me.AddInformationTextBox.TabIndex = 21
@@ -190,7 +196,7 @@ Partial Class CreateForm
         'AddInformaionButton
         '
         Me.AddInformaionButton.AutoSize = True
-        Me.AddInformaionButton.Location = New System.Drawing.Point(345, 303)
+        Me.AddInformaionButton.Location = New System.Drawing.Point(332, 263)
         Me.AddInformaionButton.Name = "AddInformaionButton"
         Me.AddInformaionButton.Size = New System.Drawing.Size(45, 30)
         Me.AddInformaionButton.TabIndex = 22
@@ -218,52 +224,77 @@ Partial Class CreateForm
         Me.CancelButton.Text = "ยกเลิก"
         Me.CancelButton.UseVisualStyleBackColor = True
         '
+        'CreateGroupBox
+        '
+        Me.CreateGroupBox.Controls.Add(Me.Panel)
+        Me.CreateGroupBox.Controls.Add(Me.TimeLimitPanel)
+        Me.CreateGroupBox.Controls.Add(Me.AddInformaionButton)
+        Me.CreateGroupBox.Controls.Add(Me.AddInformationTextBox)
+        Me.CreateGroupBox.Controls.Add(Me.InformationCheckedListBox)
+        Me.CreateGroupBox.Controls.Add(Me.InformationLabel)
+        Me.CreateGroupBox.Controls.Add(Me.TypeComboBox)
+        Me.CreateGroupBox.Controls.Add(Me.TypeLabel)
+        Me.CreateGroupBox.Controls.Add(Me.NameTextBox)
+        Me.CreateGroupBox.Controls.Add(Me.NameLabel)
+        Me.CreateGroupBox.Location = New System.Drawing.Point(12, 32)
+        Me.CreateGroupBox.Name = "CreateGroupBox"
+        Me.CreateGroupBox.Size = New System.Drawing.Size(659, 365)
+        Me.CreateGroupBox.TabIndex = 25
+        Me.CreateGroupBox.TabStop = False
+        '
+        'Panel
+        '
+        Me.Panel.Controls.Add(Me.VisiblePinLinkLabel)
+        Me.Panel.Controls.Add(Me.OnlyPinRadioButton)
+        Me.Panel.Controls.Add(Me.PublicRadioButton)
+        Me.Panel.Controls.Add(Me.AccessLabel)
+        Me.Panel.Controls.Add(Me.PinTextBox)
+        Me.Panel.Location = New System.Drawing.Point(14, 55)
+        Me.Panel.Name = "Panel"
+        Me.Panel.Size = New System.Drawing.Size(623, 42)
+        Me.Panel.TabIndex = 24
+        '
+        'VisiblePinLinkLabel
+        '
+        Me.VisiblePinLinkLabel.AutoSize = True
+        Me.VisiblePinLinkLabel.Location = New System.Drawing.Point(502, 14)
+        Me.VisiblePinLinkLabel.Name = "VisiblePinLinkLabel"
+        Me.VisiblePinLinkLabel.Size = New System.Drawing.Size(35, 20)
+        Me.VisiblePinLinkLabel.TabIndex = 14
+        Me.VisiblePinLinkLabel.TabStop = True
+        Me.VisiblePinLinkLabel.Text = "ซ่อน"
+        '
+        'TimeLimitPanel
+        '
+        Me.TimeLimitPanel.Controls.Add(Me.LimitTimeRadioButton)
+        Me.TimeLimitPanel.Controls.Add(Me.NoLimitRadioButton)
+        Me.TimeLimitPanel.Controls.Add(Me.MinuteLabel)
+        Me.TimeLimitPanel.Controls.Add(Me.TimeTextBox)
+        Me.TimeLimitPanel.Controls.Add(Me.LimitTimeLabel)
+        Me.TimeLimitPanel.Location = New System.Drawing.Point(13, 97)
+        Me.TimeLimitPanel.Name = "TimeLimitPanel"
+        Me.TimeLimitPanel.Size = New System.Drawing.Size(623, 42)
+        Me.TimeLimitPanel.TabIndex = 23
+        '
         'CreateForm
         '
         Me.AcceptButton = Me.NextButton
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
-        Me.CancelButton = Me.CancelButton
         Me.ClientSize = New System.Drawing.Size(684, 461)
+        Me.Controls.Add(Me.CreateGroupBox)
         Me.Controls.Add(Me.CancelButton)
         Me.Controls.Add(Me.NextButton)
-        Me.Controls.Add(Me.AddInformaionButton)
-        Me.Controls.Add(Me.AddInformationTextBox)
-        Me.Controls.Add(Me.InformationCheckedListBox)
-        Me.Controls.Add(Me.InformationLabel)
-        Me.Controls.Add(Me.LimitTimeRadioButton)
-        Me.Controls.Add(Me.NoLimitRadioButton)
-        Me.Controls.Add(Me.MinuteLabel)
-        Me.Controls.Add(Me.TimeTextBox)
-        Me.Controls.Add(Me.LimitTimeLabel)
-        Me.Controls.Add(Me.PinTextBox)
-        Me.Controls.Add(Me.OnlyPinRadioButton)
-        Me.Controls.Add(Me.PublicRadioButton)
-        Me.Controls.Add(Me.AccessLabel)
-        Me.Controls.Add(Me.TypeComboBox)
-        Me.Controls.Add(Me.TypeLabel)
-        Me.Controls.Add(Me.NameTextBox)
-        Me.Controls.Add(Me.NameLabel)
         Me.Name = "CreateForm"
         Me.Text = "สร้างแบบทดสอบ - MyExam"
-        Me.Controls.SetChildIndex(Me.NameLabel, 0)
-        Me.Controls.SetChildIndex(Me.NameTextBox, 0)
-        Me.Controls.SetChildIndex(Me.TypeLabel, 0)
-        Me.Controls.SetChildIndex(Me.TypeComboBox, 0)
-        Me.Controls.SetChildIndex(Me.AccessLabel, 0)
-        Me.Controls.SetChildIndex(Me.PublicRadioButton, 0)
-        Me.Controls.SetChildIndex(Me.OnlyPinRadioButton, 0)
-        Me.Controls.SetChildIndex(Me.PinTextBox, 0)
-        Me.Controls.SetChildIndex(Me.LimitTimeLabel, 0)
-        Me.Controls.SetChildIndex(Me.TimeTextBox, 0)
-        Me.Controls.SetChildIndex(Me.MinuteLabel, 0)
-        Me.Controls.SetChildIndex(Me.NoLimitRadioButton, 0)
-        Me.Controls.SetChildIndex(Me.LimitTimeRadioButton, 0)
-        Me.Controls.SetChildIndex(Me.InformationLabel, 0)
-        Me.Controls.SetChildIndex(Me.InformationCheckedListBox, 0)
-        Me.Controls.SetChildIndex(Me.AddInformationTextBox, 0)
-        Me.Controls.SetChildIndex(Me.AddInformaionButton, 0)
         Me.Controls.SetChildIndex(Me.NextButton, 0)
         Me.Controls.SetChildIndex(Me.CancelButton, 0)
+        Me.Controls.SetChildIndex(Me.CreateGroupBox, 0)
+        Me.CreateGroupBox.ResumeLayout(False)
+        Me.CreateGroupBox.PerformLayout()
+        Me.Panel.ResumeLayout(False)
+        Me.Panel.PerformLayout()
+        Me.TimeLimitPanel.ResumeLayout(False)
+        Me.TimeLimitPanel.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -288,4 +319,8 @@ Partial Class CreateForm
     Friend WithEvents AddInformaionButton As Button
     Friend WithEvents NextButton As Button
     Friend WithEvents CancelButton As Button
+    Friend WithEvents CreateGroupBox As GroupBox
+    Friend WithEvents TimeLimitPanel As Panel
+    Friend WithEvents Panel As Panel
+    Friend WithEvents VisiblePinLinkLabel As LinkLabel
 End Class
