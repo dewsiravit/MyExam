@@ -14,8 +14,8 @@
     End Sub
 
     Private Sub LoginForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        ErrorUsernameLabel.Text = ""
-        ErrorPasswordLabel.Text = ""
+        ErrorUsernameLabel.ResetText()
+        ErrorPasswordLabel.ResetText()
     End Sub
 
     Private Sub RegisterLinkLabel_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles RegisterLinkLabel.LinkClicked

@@ -258,7 +258,6 @@ Partial Class RegisterForm
         '
         Me.AcceptButton = Me.RegisterButton
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
-        Me.CancelButton = Me.CancelButton
         Me.ClientSize = New System.Drawing.Size(684, 461)
         Me.Controls.Add(Me.RegisterGroupBox)
         Me.Margin = New System.Windows.Forms.Padding(10, 11, 10, 11)

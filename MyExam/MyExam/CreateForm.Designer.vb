@@ -42,6 +42,8 @@ Partial Class CreateForm
         Me.Panel = New System.Windows.Forms.Panel()
         Me.VisiblePinLinkLabel = New System.Windows.Forms.LinkLabel()
         Me.TimeLimitPanel = New System.Windows.Forms.Panel()
+        Me.ErrorNameLabel = New System.Windows.Forms.Label()
+        Me.ErrorAddInformationLabel = New System.Windows.Forms.Label()
         Me.CreateGroupBox.SuspendLayout()
         Me.Panel.SuspendLayout()
         Me.TimeLimitPanel.SuspendLayout()
@@ -50,7 +52,7 @@ Partial Class CreateForm
         'NameLabel
         '
         Me.NameLabel.AutoSize = True
-        Me.NameLabel.Location = New System.Drawing.Point(17, 24)
+        Me.NameLabel.Location = New System.Drawing.Point(18, 40)
         Me.NameLabel.Name = "NameLabel"
         Me.NameLabel.Size = New System.Drawing.Size(101, 20)
         Me.NameLabel.TabIndex = 6
@@ -58,7 +60,7 @@ Partial Class CreateForm
         '
         'NameTextBox
         '
-        Me.NameTextBox.Location = New System.Drawing.Point(124, 21)
+        Me.NameTextBox.Location = New System.Drawing.Point(125, 37)
         Me.NameTextBox.Name = "NameTextBox"
         Me.NameTextBox.Size = New System.Drawing.Size(323, 26)
         Me.NameTextBox.TabIndex = 7
@@ -66,7 +68,7 @@ Partial Class CreateForm
         'TypeLabel
         '
         Me.TypeLabel.AutoSize = True
-        Me.TypeLabel.Location = New System.Drawing.Point(453, 24)
+        Me.TypeLabel.Location = New System.Drawing.Point(454, 40)
         Me.TypeLabel.Name = "TypeLabel"
         Me.TypeLabel.Size = New System.Drawing.Size(57, 20)
         Me.TypeLabel.TabIndex = 8
@@ -77,7 +79,7 @@ Partial Class CreateForm
         Me.TypeComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.TypeComboBox.FormattingEnabled = True
         Me.TypeComboBox.Items.AddRange(New Object() {"เลือกคำตอบ", "เติมคำตอบ", "เขียนคำตอบ", "จับคู่", "ถูกผิด"})
-        Me.TypeComboBox.Location = New System.Drawing.Point(516, 21)
+        Me.TypeComboBox.Location = New System.Drawing.Point(517, 37)
         Me.TypeComboBox.Name = "TypeComboBox"
         Me.TypeComboBox.Size = New System.Drawing.Size(121, 28)
         Me.TypeComboBox.TabIndex = 9
@@ -171,7 +173,7 @@ Partial Class CreateForm
         'InformationLabel
         '
         Me.InformationLabel.AutoSize = True
-        Me.InformationLabel.Location = New System.Drawing.Point(17, 150)
+        Me.InformationLabel.Location = New System.Drawing.Point(18, 166)
         Me.InformationLabel.Name = "InformationLabel"
         Me.InformationLabel.Size = New System.Drawing.Size(104, 20)
         Me.InformationLabel.TabIndex = 19
@@ -181,14 +183,14 @@ Partial Class CreateForm
         '
         Me.InformationCheckedListBox.FormattingEnabled = True
         Me.InformationCheckedListBox.Items.AddRange(New Object() {"ชื่อผู้ใช้", "ชื่อ", "นามสกุล", "เลขประจำตัว"})
-        Me.InformationCheckedListBox.Location = New System.Drawing.Point(124, 150)
+        Me.InformationCheckedListBox.Location = New System.Drawing.Point(125, 166)
         Me.InformationCheckedListBox.Name = "InformationCheckedListBox"
         Me.InformationCheckedListBox.Size = New System.Drawing.Size(513, 109)
         Me.InformationCheckedListBox.TabIndex = 20
         '
         'AddInformationTextBox
         '
-        Me.AddInformationTextBox.Location = New System.Drawing.Point(124, 265)
+        Me.AddInformationTextBox.Location = New System.Drawing.Point(125, 281)
         Me.AddInformationTextBox.Name = "AddInformationTextBox"
         Me.AddInformationTextBox.Size = New System.Drawing.Size(202, 26)
         Me.AddInformationTextBox.TabIndex = 21
@@ -196,7 +198,7 @@ Partial Class CreateForm
         'AddInformaionButton
         '
         Me.AddInformaionButton.AutoSize = True
-        Me.AddInformaionButton.Location = New System.Drawing.Point(332, 263)
+        Me.AddInformaionButton.Location = New System.Drawing.Point(333, 279)
         Me.AddInformaionButton.Name = "AddInformaionButton"
         Me.AddInformaionButton.Size = New System.Drawing.Size(45, 30)
         Me.AddInformaionButton.TabIndex = 22
@@ -226,6 +228,8 @@ Partial Class CreateForm
         '
         'CreateGroupBox
         '
+        Me.CreateGroupBox.Controls.Add(Me.ErrorAddInformationLabel)
+        Me.CreateGroupBox.Controls.Add(Me.ErrorNameLabel)
         Me.CreateGroupBox.Controls.Add(Me.Panel)
         Me.CreateGroupBox.Controls.Add(Me.TimeLimitPanel)
         Me.CreateGroupBox.Controls.Add(Me.AddInformaionButton)
@@ -249,7 +253,7 @@ Partial Class CreateForm
         Me.Panel.Controls.Add(Me.PublicRadioButton)
         Me.Panel.Controls.Add(Me.AccessLabel)
         Me.Panel.Controls.Add(Me.PinTextBox)
-        Me.Panel.Location = New System.Drawing.Point(14, 55)
+        Me.Panel.Location = New System.Drawing.Point(15, 71)
         Me.Panel.Name = "Panel"
         Me.Panel.Size = New System.Drawing.Size(623, 42)
         Me.Panel.TabIndex = 24
@@ -271,10 +275,30 @@ Partial Class CreateForm
         Me.TimeLimitPanel.Controls.Add(Me.MinuteLabel)
         Me.TimeLimitPanel.Controls.Add(Me.TimeTextBox)
         Me.TimeLimitPanel.Controls.Add(Me.LimitTimeLabel)
-        Me.TimeLimitPanel.Location = New System.Drawing.Point(13, 97)
+        Me.TimeLimitPanel.Location = New System.Drawing.Point(14, 113)
         Me.TimeLimitPanel.Name = "TimeLimitPanel"
         Me.TimeLimitPanel.Size = New System.Drawing.Size(623, 42)
         Me.TimeLimitPanel.TabIndex = 23
+        '
+        'ErrorNameLabel
+        '
+        Me.ErrorNameLabel.AutoSize = True
+        Me.ErrorNameLabel.ForeColor = System.Drawing.Color.Red
+        Me.ErrorNameLabel.Location = New System.Drawing.Point(126, 14)
+        Me.ErrorNameLabel.Name = "ErrorNameLabel"
+        Me.ErrorNameLabel.Size = New System.Drawing.Size(57, 20)
+        Me.ErrorNameLabel.TabIndex = 25
+        Me.ErrorNameLabel.Text = "Label1"
+        '
+        'ErrorAddInformationLabel
+        '
+        Me.ErrorAddInformationLabel.AutoSize = True
+        Me.ErrorAddInformationLabel.ForeColor = System.Drawing.Color.Red
+        Me.ErrorAddInformationLabel.Location = New System.Drawing.Point(384, 284)
+        Me.ErrorAddInformationLabel.Name = "ErrorAddInformationLabel"
+        Me.ErrorAddInformationLabel.Size = New System.Drawing.Size(57, 20)
+        Me.ErrorAddInformationLabel.TabIndex = 26
+        Me.ErrorAddInformationLabel.Text = "Label1"
         '
         'CreateForm
         '
@@ -323,4 +347,6 @@ Partial Class CreateForm
     Friend WithEvents TimeLimitPanel As Panel
     Friend WithEvents Panel As Panel
     Friend WithEvents VisiblePinLinkLabel As LinkLabel
+    Friend WithEvents ErrorAddInformationLabel As Label
+    Friend WithEvents ErrorNameLabel As Label
 End Class

@@ -17,10 +17,10 @@
     End Sub
 
     Private Sub ForgotPasswordForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        ErrorNameLabel.Text = ""
-        ErrorAnswerLabel.Text = ""
-        ErrorNewPasswordLabel.Text = ""
-        ErrorNewPasswordConfirmLabel.Text = ""
+        ErrorNameLabel.ResetText()
+        ErrorAnswerLabel.ResetText()
+        ErrorNewPasswordLabel.ResetText()
+        ErrorNewPasswordConfirmLabel.ResetText()
         ChangePasswordGroupBox.Visible = False
     End Sub
 
