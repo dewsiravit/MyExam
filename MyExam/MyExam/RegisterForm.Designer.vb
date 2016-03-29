@@ -31,7 +31,7 @@ Partial Class RegisterForm
         Me.EmailTextBox = New System.Windows.Forms.TextBox()
         Me.QuestionTextBox = New System.Windows.Forms.TextBox()
         Me.AnswerTextBox = New System.Windows.Forms.TextBox()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.RegisterButton = New System.Windows.Forms.Button()
         Me.CancelButton = New System.Windows.Forms.Button()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
@@ -147,14 +147,14 @@ Partial Class RegisterForm
         Me.AnswerTextBox.Size = New System.Drawing.Size(187, 26)
         Me.AnswerTextBox.TabIndex = 11
         '
-        'Button1
+        'RegisterButton
         '
-        Me.Button1.Location = New System.Drawing.Point(165, 327)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(146, 56)
-        Me.Button1.TabIndex = 12
-        Me.Button1.Text = "สมัครสมาชิก"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.RegisterButton.Location = New System.Drawing.Point(165, 327)
+        Me.RegisterButton.Name = "RegisterButton"
+        Me.RegisterButton.Size = New System.Drawing.Size(146, 56)
+        Me.RegisterButton.TabIndex = 12
+        Me.RegisterButton.Text = "สมัครสมาชิก"
+        Me.RegisterButton.UseVisualStyleBackColor = True
         '
         'CancelButton
         '
@@ -231,7 +231,7 @@ Partial Class RegisterForm
         Me.RegisterGroupBox.Controls.Add(Me.Label12)
         Me.RegisterGroupBox.Controls.Add(Me.CancelButton)
         Me.RegisterGroupBox.Controls.Add(Me.Label11)
-        Me.RegisterGroupBox.Controls.Add(Me.Button1)
+        Me.RegisterGroupBox.Controls.Add(Me.RegisterButton)
         Me.RegisterGroupBox.Controls.Add(Me.Label10)
         Me.RegisterGroupBox.Controls.Add(Me.Label9)
         Me.RegisterGroupBox.Controls.Add(Me.Label8)
@@ -256,8 +256,9 @@ Partial Class RegisterForm
         '
         'RegisterForm
         '
-        Me.AcceptButton = Me.Button1
+        Me.AcceptButton = Me.RegisterButton
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
+        Me.CancelButton = Me.CancelButton
         Me.ClientSize = New System.Drawing.Size(684, 461)
         Me.Controls.Add(Me.RegisterGroupBox)
         Me.Margin = New System.Windows.Forms.Padding(10, 11, 10, 11)
@@ -281,7 +282,7 @@ Partial Class RegisterForm
     Friend WithEvents EmailTextBox As TextBox
     Friend WithEvents QuestionTextBox As TextBox
     Friend WithEvents AnswerTextBox As TextBox
-    Friend WithEvents Button1 As Button
+    Friend WithEvents RegisterButton As Button
     Friend WithEvents CancelButton As Button
     Friend WithEvents Label7 As Label
     Friend WithEvents Label8 As Label
