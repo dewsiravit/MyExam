@@ -177,7 +177,7 @@ Partial Class CreateChoiceForm
         Me.CancelButton.Name = "CancelButton"
         Me.CancelButton.Size = New System.Drawing.Size(91, 39)
         Me.CancelButton.TabIndex = 24
-        Me.CancelButton.Text = "ยกเลิก"
+        Me.CancelButton.Text = "ย้อนกลับ"
         Me.CancelButton.UseVisualStyleBackColor = True
         '
         'CreateChoiceForm
