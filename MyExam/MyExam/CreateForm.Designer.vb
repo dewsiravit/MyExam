@@ -37,7 +37,7 @@ Partial Class CreateForm
         Me.AddInformationTextBox = New System.Windows.Forms.TextBox()
         Me.AddInformaionButton = New System.Windows.Forms.Button()
         Me.NextButton = New System.Windows.Forms.Button()
-        Me.CancelButton = New System.Windows.Forms.Button()
+        Me.BackButton = New System.Windows.Forms.Button()
         Me.CreateGroupBox = New System.Windows.Forms.GroupBox()
         Me.ErrorAddInformationLabel = New System.Windows.Forms.Label()
         Me.ErrorNameLabel = New System.Windows.Forms.Label()
@@ -216,16 +216,16 @@ Partial Class CreateForm
         Me.NextButton.Text = "ถัดไป"
         Me.NextButton.UseVisualStyleBackColor = True
         '
-        'CancelButton
+        'BackButton
         '
-        Me.CancelButton.AutoSize = True
-        Me.CancelButton.DialogResult = System.Windows.Forms.DialogResult.Cancel
-        Me.CancelButton.Location = New System.Drawing.Point(317, 403)
-        Me.CancelButton.Name = "CancelButton"
-        Me.CancelButton.Size = New System.Drawing.Size(112, 46)
-        Me.CancelButton.TabIndex = 24
-        Me.CancelButton.Text = "ย้อนกลับ"
-        Me.CancelButton.UseVisualStyleBackColor = True
+        Me.BackButton.AutoSize = True
+        Me.BackButton.DialogResult = System.Windows.Forms.DialogResult.Cancel
+        Me.BackButton.Location = New System.Drawing.Point(317, 403)
+        Me.BackButton.Name = "BackButton"
+        Me.BackButton.Size = New System.Drawing.Size(112, 46)
+        Me.BackButton.TabIndex = 24
+        Me.BackButton.Text = "ย้อนกลับ"
+        Me.BackButton.UseVisualStyleBackColor = True
         '
         'CreateGroupBox
         '
@@ -307,12 +307,12 @@ Partial Class CreateForm
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.ClientSize = New System.Drawing.Size(684, 461)
         Me.Controls.Add(Me.CreateGroupBox)
-        Me.Controls.Add(Me.CancelButton)
+        Me.Controls.Add(Me.BackButton)
         Me.Controls.Add(Me.NextButton)
         Me.Name = "CreateForm"
         Me.Text = "สร้างแบบทดสอบ - MyExam"
         Me.Controls.SetChildIndex(Me.NextButton, 0)
-        Me.Controls.SetChildIndex(Me.CancelButton, 0)
+        Me.Controls.SetChildIndex(Me.BackButton, 0)
         Me.Controls.SetChildIndex(Me.CreateGroupBox, 0)
         Me.CreateGroupBox.ResumeLayout(False)
         Me.CreateGroupBox.PerformLayout()
@@ -343,7 +343,7 @@ Partial Class CreateForm
     Friend WithEvents AddInformationTextBox As TextBox
     Friend WithEvents AddInformaionButton As Button
     Friend WithEvents NextButton As Button
-    Friend WithEvents CancelButton As Button
+    Friend WithEvents BackButton As Button
     Friend WithEvents CreateGroupBox As GroupBox
     Friend WithEvents TimeLimitPanel As Panel
     Friend WithEvents Panel As Panel

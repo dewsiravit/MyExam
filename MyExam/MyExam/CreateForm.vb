@@ -28,7 +28,7 @@
         End If
     End Sub
 
-    Private Sub CancelButton_Click(sender As Object, e As EventArgs) Handles CancelButton.Click
+    Private Sub BackButton_Click(sender As Object, e As EventArgs) Handles BackButton.Click
         MainForm.Show()
         Close()
     End Sub

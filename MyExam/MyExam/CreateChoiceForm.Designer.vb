@@ -20,11 +20,6 @@ Partial Class CreateChoiceForm
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.NumberLabel = New System.Windows.Forms.Label()
-        Me.QurstionTextBox = New System.Windows.Forms.TextBox()
-        Me.ChoiceATextBox = New System.Windows.Forms.TextBox()
-        Me.ChoiceBTextBox = New System.Windows.Forms.TextBox()
-        Me.ChoiceCTextBox = New System.Windows.Forms.TextBox()
-        Me.ChoiceDTextBox = New System.Windows.Forms.TextBox()
         Me.ChoiceARadioButton = New System.Windows.Forms.RadioButton()
         Me.ChoiceBRadioButton = New System.Windows.Forms.RadioButton()
         Me.ChoiceCRadioButton = New System.Windows.Forms.RadioButton()
@@ -34,7 +29,12 @@ Partial Class CreateChoiceForm
         Me.PreviewLinkLabel = New System.Windows.Forms.LinkLabel()
         Me.SaveButton = New System.Windows.Forms.Button()
         Me.NextButton = New System.Windows.Forms.Button()
-        Me.CancelButton = New System.Windows.Forms.Button()
+        Me.BackButton = New System.Windows.Forms.Button()
+        Me.QurstionRichTextBox = New System.Windows.Forms.RichTextBox()
+        Me.ChoiceARichTextBox = New System.Windows.Forms.RichTextBox()
+        Me.ChoiceBRichTextBox = New System.Windows.Forms.RichTextBox()
+        Me.ChoiceCRichTextBox = New System.Windows.Forms.RichTextBox()
+        Me.ChoiceDRichTextBox = New System.Windows.Forms.RichTextBox()
         Me.SuspendLayout()
         '
         'NumberLabel
@@ -45,46 +45,6 @@ Partial Class CreateChoiceForm
         Me.NumberLabel.Size = New System.Drawing.Size(36, 20)
         Me.NumberLabel.TabIndex = 7
         Me.NumberLabel.Text = "ข้อที่"
-        '
-        'QurstionTextBox
-        '
-        Me.QurstionTextBox.Location = New System.Drawing.Point(25, 78)
-        Me.QurstionTextBox.Multiline = True
-        Me.QurstionTextBox.Name = "QurstionTextBox"
-        Me.QurstionTextBox.Size = New System.Drawing.Size(647, 70)
-        Me.QurstionTextBox.TabIndex = 8
-        '
-        'ChoiceATextBox
-        '
-        Me.ChoiceATextBox.Location = New System.Drawing.Point(43, 154)
-        Me.ChoiceATextBox.Multiline = True
-        Me.ChoiceATextBox.Name = "ChoiceATextBox"
-        Me.ChoiceATextBox.Size = New System.Drawing.Size(629, 51)
-        Me.ChoiceATextBox.TabIndex = 10
-        '
-        'ChoiceBTextBox
-        '
-        Me.ChoiceBTextBox.Location = New System.Drawing.Point(43, 211)
-        Me.ChoiceBTextBox.Multiline = True
-        Me.ChoiceBTextBox.Name = "ChoiceBTextBox"
-        Me.ChoiceBTextBox.Size = New System.Drawing.Size(629, 51)
-        Me.ChoiceBTextBox.TabIndex = 12
-        '
-        'ChoiceCTextBox
-        '
-        Me.ChoiceCTextBox.Location = New System.Drawing.Point(43, 268)
-        Me.ChoiceCTextBox.Multiline = True
-        Me.ChoiceCTextBox.Name = "ChoiceCTextBox"
-        Me.ChoiceCTextBox.Size = New System.Drawing.Size(629, 51)
-        Me.ChoiceCTextBox.TabIndex = 13
-        '
-        'ChoiceDTextBox
-        '
-        Me.ChoiceDTextBox.Location = New System.Drawing.Point(43, 325)
-        Me.ChoiceDTextBox.Multiline = True
-        Me.ChoiceDTextBox.Name = "ChoiceDTextBox"
-        Me.ChoiceDTextBox.Size = New System.Drawing.Size(629, 51)
-        Me.ChoiceDTextBox.TabIndex = 14
         '
         'ChoiceARadioButton
         '
@@ -171,20 +131,65 @@ Partial Class CreateChoiceForm
         Me.NextButton.Text = "ถัดไป"
         Me.NextButton.UseVisualStyleBackColor = True
         '
-        'CancelButton
+        'BackButton
         '
-        Me.CancelButton.Location = New System.Drawing.Point(384, 396)
-        Me.CancelButton.Name = "CancelButton"
-        Me.CancelButton.Size = New System.Drawing.Size(91, 39)
-        Me.CancelButton.TabIndex = 24
-        Me.CancelButton.Text = "ย้อนกลับ"
-        Me.CancelButton.UseVisualStyleBackColor = True
+        Me.BackButton.Location = New System.Drawing.Point(384, 396)
+        Me.BackButton.Name = "BackButton"
+        Me.BackButton.Size = New System.Drawing.Size(91, 39)
+        Me.BackButton.TabIndex = 24
+        Me.BackButton.Text = "ย้อนกลับ"
+        Me.BackButton.UseVisualStyleBackColor = True
+        '
+        'QurstionRichTextBox
+        '
+        Me.QurstionRichTextBox.Location = New System.Drawing.Point(25, 78)
+        Me.QurstionRichTextBox.Name = "QurstionRichTextBox"
+        Me.QurstionRichTextBox.Size = New System.Drawing.Size(646, 65)
+        Me.QurstionRichTextBox.TabIndex = 25
+        Me.QurstionRichTextBox.Text = ""
+        '
+        'ChoiceARichTextBox
+        '
+        Me.ChoiceARichTextBox.Location = New System.Drawing.Point(43, 154)
+        Me.ChoiceARichTextBox.Name = "ChoiceARichTextBox"
+        Me.ChoiceARichTextBox.Size = New System.Drawing.Size(628, 51)
+        Me.ChoiceARichTextBox.TabIndex = 26
+        Me.ChoiceARichTextBox.Text = ""
+        '
+        'ChoiceBRichTextBox
+        '
+        Me.ChoiceBRichTextBox.Location = New System.Drawing.Point(43, 211)
+        Me.ChoiceBRichTextBox.Name = "ChoiceBRichTextBox"
+        Me.ChoiceBRichTextBox.Size = New System.Drawing.Size(628, 51)
+        Me.ChoiceBRichTextBox.TabIndex = 27
+        Me.ChoiceBRichTextBox.Text = ""
+        '
+        'ChoiceCRichTextBox
+        '
+        Me.ChoiceCRichTextBox.Location = New System.Drawing.Point(43, 268)
+        Me.ChoiceCRichTextBox.Name = "ChoiceCRichTextBox"
+        Me.ChoiceCRichTextBox.Size = New System.Drawing.Size(628, 51)
+        Me.ChoiceCRichTextBox.TabIndex = 28
+        Me.ChoiceCRichTextBox.Text = ""
+        '
+        'ChoiceDRichTextBox
+        '
+        Me.ChoiceDRichTextBox.Location = New System.Drawing.Point(43, 325)
+        Me.ChoiceDRichTextBox.Name = "ChoiceDRichTextBox"
+        Me.ChoiceDRichTextBox.Size = New System.Drawing.Size(628, 51)
+        Me.ChoiceDRichTextBox.TabIndex = 29
+        Me.ChoiceDRichTextBox.Text = ""
         '
         'CreateChoiceForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.ClientSize = New System.Drawing.Size(684, 461)
-        Me.Controls.Add(Me.CancelButton)
+        Me.Controls.Add(Me.ChoiceDRichTextBox)
+        Me.Controls.Add(Me.ChoiceCRichTextBox)
+        Me.Controls.Add(Me.ChoiceBRichTextBox)
+        Me.Controls.Add(Me.ChoiceARichTextBox)
+        Me.Controls.Add(Me.QurstionRichTextBox)
+        Me.Controls.Add(Me.BackButton)
         Me.Controls.Add(Me.NextButton)
         Me.Controls.Add(Me.SaveButton)
         Me.Controls.Add(Me.PreviewLinkLabel)
@@ -194,20 +199,10 @@ Partial Class CreateChoiceForm
         Me.Controls.Add(Me.ChoiceCRadioButton)
         Me.Controls.Add(Me.ChoiceBRadioButton)
         Me.Controls.Add(Me.ChoiceARadioButton)
-        Me.Controls.Add(Me.ChoiceDTextBox)
-        Me.Controls.Add(Me.ChoiceCTextBox)
-        Me.Controls.Add(Me.ChoiceBTextBox)
-        Me.Controls.Add(Me.ChoiceATextBox)
-        Me.Controls.Add(Me.QurstionTextBox)
         Me.Controls.Add(Me.NumberLabel)
         Me.Name = "CreateChoiceForm"
         Me.Text = "แบบทดสอบ เลือกตอบ - MyExam"
         Me.Controls.SetChildIndex(Me.NumberLabel, 0)
-        Me.Controls.SetChildIndex(Me.QurstionTextBox, 0)
-        Me.Controls.SetChildIndex(Me.ChoiceATextBox, 0)
-        Me.Controls.SetChildIndex(Me.ChoiceBTextBox, 0)
-        Me.Controls.SetChildIndex(Me.ChoiceCTextBox, 0)
-        Me.Controls.SetChildIndex(Me.ChoiceDTextBox, 0)
         Me.Controls.SetChildIndex(Me.ChoiceARadioButton, 0)
         Me.Controls.SetChildIndex(Me.ChoiceBRadioButton, 0)
         Me.Controls.SetChildIndex(Me.ChoiceCRadioButton, 0)
@@ -217,18 +212,18 @@ Partial Class CreateChoiceForm
         Me.Controls.SetChildIndex(Me.PreviewLinkLabel, 0)
         Me.Controls.SetChildIndex(Me.SaveButton, 0)
         Me.Controls.SetChildIndex(Me.NextButton, 0)
-        Me.Controls.SetChildIndex(Me.CancelButton, 0)
+        Me.Controls.SetChildIndex(Me.BackButton, 0)
+        Me.Controls.SetChildIndex(Me.QurstionRichTextBox, 0)
+        Me.Controls.SetChildIndex(Me.ChoiceARichTextBox, 0)
+        Me.Controls.SetChildIndex(Me.ChoiceBRichTextBox, 0)
+        Me.Controls.SetChildIndex(Me.ChoiceCRichTextBox, 0)
+        Me.Controls.SetChildIndex(Me.ChoiceDRichTextBox, 0)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
 
     Friend WithEvents NumberLabel As Label
-    Friend WithEvents QurstionTextBox As TextBox
-    Friend WithEvents ChoiceATextBox As TextBox
-    Friend WithEvents ChoiceBTextBox As TextBox
-    Friend WithEvents ChoiceCTextBox As TextBox
-    Friend WithEvents ChoiceDTextBox As TextBox
     Friend WithEvents ChoiceARadioButton As RadioButton
     Friend WithEvents ChoiceBRadioButton As RadioButton
     Friend WithEvents ChoiceCRadioButton As RadioButton
@@ -238,5 +233,10 @@ Partial Class CreateChoiceForm
     Friend WithEvents PreviewLinkLabel As LinkLabel
     Friend WithEvents SaveButton As Button
     Friend WithEvents NextButton As Button
-    Friend WithEvents CancelButton As Button
+    Friend WithEvents BackButton As Button
+    Friend WithEvents QurstionRichTextBox As RichTextBox
+    Friend WithEvents ChoiceARichTextBox As RichTextBox
+    Friend WithEvents ChoiceBRichTextBox As RichTextBox
+    Friend WithEvents ChoiceCRichTextBox As RichTextBox
+    Friend WithEvents ChoiceDRichTextBox As RichTextBox
 End Class
