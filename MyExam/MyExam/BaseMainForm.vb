@@ -8,4 +8,14 @@
         MainForm.Show()
         Close()
     End Sub
+
+    Private Sub ProfileLinkLabel_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles ProfileLinkLabel.LinkClicked
+        For Each form As Form In Application.OpenForms
+            If form.Name.Equals("ProfileForm") Then
+                Exit Sub
+            End If
+        Next
+        ProfileForm.Show()
+        Close()
+    End Sub
 End Class
