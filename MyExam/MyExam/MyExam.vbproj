@@ -91,6 +91,12 @@
     <Compile Include="BaseMainForm.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="CreateBlankForm.Designer.vb">
+      <DependentUpon>CreateBlankForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CreateBlankForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="CreateChoiceForm.Designer.vb">
       <DependentUpon>CreateChoiceForm.vb</DependentUpon>
     </Compile>
@@ -101,6 +107,24 @@
       <DependentUpon>CreateForm.vb</DependentUpon>
     </Compile>
     <Compile Include="CreateForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CreateMatchForm.Designer.vb">
+      <DependentUpon>CreateMatchForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CreateMatchForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CreateTrueFalseForm.Designer.vb">
+      <DependentUpon>CreateTrueFalseForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CreateTrueFalseForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CreateWriteForm.Designer.vb">
+      <DependentUpon>CreateWriteForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CreateWriteForm.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="ForgotPasswordForm.Designer.vb">
@@ -156,11 +180,23 @@
     <EmbeddedResource Include="BaseMainForm.resx">
       <DependentUpon>BaseMainForm.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="CreateBlankForm.resx">
+      <DependentUpon>CreateBlankForm.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CreateChoiceForm.resx">
       <DependentUpon>CreateChoiceForm.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CreateForm.resx">
       <DependentUpon>CreateForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CreateMatchForm.resx">
+      <DependentUpon>CreateMatchForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CreateTrueFalseForm.resx">
+      <DependentUpon>CreateTrueFalseForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CreateWriteForm.resx">
+      <DependentUpon>CreateWriteForm.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ForgotPasswordForm.resx">
       <DependentUpon>ForgotPasswordForm.vb</DependentUpon>

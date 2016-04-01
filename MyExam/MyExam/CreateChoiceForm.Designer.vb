@@ -115,7 +115,7 @@ Partial Class CreateChoiceForm
         '
         'SaveButton
         '
-        Me.SaveButton.Location = New System.Drawing.Point(190, 396)
+        Me.SaveButton.Location = New System.Drawing.Point(384, 396)
         Me.SaveButton.Name = "SaveButton"
         Me.SaveButton.Size = New System.Drawing.Size(91, 39)
         Me.SaveButton.TabIndex = 22
@@ -133,7 +133,7 @@ Partial Class CreateChoiceForm
         '
         'BackButton
         '
-        Me.BackButton.Location = New System.Drawing.Point(384, 396)
+        Me.BackButton.Location = New System.Drawing.Point(190, 396)
         Me.BackButton.Name = "BackButton"
         Me.BackButton.Size = New System.Drawing.Size(91, 39)
         Me.BackButton.TabIndex = 24
@@ -201,7 +201,7 @@ Partial Class CreateChoiceForm
         Me.Controls.Add(Me.ChoiceARadioButton)
         Me.Controls.Add(Me.NumberLabel)
         Me.Name = "CreateChoiceForm"
-        Me.Text = "แบบทดสอบ เลือกตอบ - MyExam"
+        Me.Text = "สร้างแบบทดสอบ เลือกตอบ - MyExam"
         Me.Controls.SetChildIndex(Me.NumberLabel, 0)
         Me.Controls.SetChildIndex(Me.ChoiceARadioButton, 0)
         Me.Controls.SetChildIndex(Me.ChoiceBRadioButton, 0)

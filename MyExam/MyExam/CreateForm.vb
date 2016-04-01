@@ -86,7 +86,18 @@
     End Sub
 
     Private Sub NextButton_Click(sender As Object, e As EventArgs) Handles NextButton.Click
-        CreateChoiceForm.Show()
+        Select Case TypeComboBox.SelectedIndex
+            Case 0
+                CreateChoiceForm.Show()
+            Case 1
+                CreateWriteForm.Show()
+            Case 3
+                CreateMatchForm.show()
+            Case 2
+                CreateBlankForm.Show()
+            Case 4
+                CreateTrueFalseForm.Show()
+        End Select
         Close()
     End Sub
 End Class
