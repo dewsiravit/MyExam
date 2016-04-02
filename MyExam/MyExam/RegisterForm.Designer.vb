@@ -33,7 +33,7 @@ Partial Class RegisterForm
         Me.AnswerTextBox = New System.Windows.Forms.TextBox()
         Me.RegisterButton = New System.Windows.Forms.Button()
         Me.CancelButton = New System.Windows.Forms.Button()
-        Me.Label7 = New System.Windows.Forms.Label()
+        Me.ErrorUsernameLabel = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.Label10 = New System.Windows.Forms.Label()
@@ -166,15 +166,15 @@ Partial Class RegisterForm
         Me.CancelButton.Text = "ยกเลิก"
         Me.CancelButton.UseVisualStyleBackColor = True
         '
-        'Label7
+        'ErrorUsernameLabel
         '
-        Me.Label7.AutoSize = True
-        Me.Label7.ForeColor = System.Drawing.Color.Red
-        Me.Label7.Location = New System.Drawing.Point(416, 56)
-        Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(15, 20)
-        Me.Label7.TabIndex = 14
-        Me.Label7.Text = "*"
+        Me.ErrorUsernameLabel.AutoSize = True
+        Me.ErrorUsernameLabel.ForeColor = System.Drawing.Color.Red
+        Me.ErrorUsernameLabel.Location = New System.Drawing.Point(416, 56)
+        Me.ErrorUsernameLabel.Name = "ErrorUsernameLabel"
+        Me.ErrorUsernameLabel.Size = New System.Drawing.Size(15, 20)
+        Me.ErrorUsernameLabel.TabIndex = 14
+        Me.ErrorUsernameLabel.Text = "*"
         '
         'Label8
         '
@@ -235,7 +235,7 @@ Partial Class RegisterForm
         Me.RegisterGroupBox.Controls.Add(Me.Label10)
         Me.RegisterGroupBox.Controls.Add(Me.Label9)
         Me.RegisterGroupBox.Controls.Add(Me.Label8)
-        Me.RegisterGroupBox.Controls.Add(Me.Label7)
+        Me.RegisterGroupBox.Controls.Add(Me.ErrorUsernameLabel)
         Me.RegisterGroupBox.Controls.Add(Me.AnswerTextBox)
         Me.RegisterGroupBox.Controls.Add(Me.QuestionTextBox)
         Me.RegisterGroupBox.Controls.Add(Me.EmailTextBox)
@@ -283,7 +283,7 @@ Partial Class RegisterForm
     Friend WithEvents AnswerTextBox As TextBox
     Friend WithEvents RegisterButton As Button
     Friend WithEvents CancelButton As Button
-    Friend WithEvents Label7 As Label
+    Friend WithEvents ErrorUsernameLabel As Label
     Friend WithEvents Label8 As Label
     Friend WithEvents Label9 As Label
     Friend WithEvents Label10 As Label
