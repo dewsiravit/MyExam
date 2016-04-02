@@ -33,12 +33,12 @@ Partial Class RegisterForm
         Me.AnswerTextBox = New System.Windows.Forms.TextBox()
         Me.RegisterButton = New System.Windows.Forms.Button()
         Me.CancelButton = New System.Windows.Forms.Button()
-        Me.Label7 = New System.Windows.Forms.Label()
-        Me.Label8 = New System.Windows.Forms.Label()
-        Me.Label9 = New System.Windows.Forms.Label()
-        Me.Label10 = New System.Windows.Forms.Label()
-        Me.Label11 = New System.Windows.Forms.Label()
-        Me.Label12 = New System.Windows.Forms.Label()
+        Me.ErrorUsernameLabel = New System.Windows.Forms.Label()
+        Me.ErrorPasswordLabel = New System.Windows.Forms.Label()
+        Me.ErrorConfirmPasswordLabel = New System.Windows.Forms.Label()
+        Me.ErrorEmailLabel = New System.Windows.Forms.Label()
+        Me.ErrorQuestionLabel = New System.Windows.Forms.Label()
+        Me.ErrorAnswerLabel = New System.Windows.Forms.Label()
         Me.RegisterGroupBox = New System.Windows.Forms.GroupBox()
         Me.RegisterGroupBox.SuspendLayout()
         Me.SuspendLayout()
@@ -166,76 +166,76 @@ Partial Class RegisterForm
         Me.CancelButton.Text = "ยกเลิก"
         Me.CancelButton.UseVisualStyleBackColor = True
         '
-        'Label7
+        'ErrorUsernameLabel
         '
-        Me.Label7.AutoSize = True
-        Me.Label7.ForeColor = System.Drawing.Color.Red
-        Me.Label7.Location = New System.Drawing.Point(416, 56)
-        Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(15, 20)
-        Me.Label7.TabIndex = 14
-        Me.Label7.Text = "*"
+        Me.ErrorUsernameLabel.AutoSize = True
+        Me.ErrorUsernameLabel.ForeColor = System.Drawing.Color.Red
+        Me.ErrorUsernameLabel.Location = New System.Drawing.Point(416, 56)
+        Me.ErrorUsernameLabel.Name = "ErrorUsernameLabel"
+        Me.ErrorUsernameLabel.Size = New System.Drawing.Size(15, 20)
+        Me.ErrorUsernameLabel.TabIndex = 14
+        Me.ErrorUsernameLabel.Text = "*"
         '
-        'Label8
+        'ErrorPasswordLabel
         '
-        Me.Label8.AutoSize = True
-        Me.Label8.ForeColor = System.Drawing.Color.Red
-        Me.Label8.Location = New System.Drawing.Point(416, 88)
-        Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(15, 20)
-        Me.Label8.TabIndex = 15
-        Me.Label8.Text = "*"
+        Me.ErrorPasswordLabel.AutoSize = True
+        Me.ErrorPasswordLabel.ForeColor = System.Drawing.Color.Red
+        Me.ErrorPasswordLabel.Location = New System.Drawing.Point(416, 88)
+        Me.ErrorPasswordLabel.Name = "ErrorPasswordLabel"
+        Me.ErrorPasswordLabel.Size = New System.Drawing.Size(15, 20)
+        Me.ErrorPasswordLabel.TabIndex = 15
+        Me.ErrorPasswordLabel.Text = "*"
         '
-        'Label9
+        'ErrorConfirmPasswordLabel
         '
-        Me.Label9.AutoSize = True
-        Me.Label9.ForeColor = System.Drawing.Color.Red
-        Me.Label9.Location = New System.Drawing.Point(416, 120)
-        Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(15, 20)
-        Me.Label9.TabIndex = 16
-        Me.Label9.Text = "*"
+        Me.ErrorConfirmPasswordLabel.AutoSize = True
+        Me.ErrorConfirmPasswordLabel.ForeColor = System.Drawing.Color.Red
+        Me.ErrorConfirmPasswordLabel.Location = New System.Drawing.Point(416, 120)
+        Me.ErrorConfirmPasswordLabel.Name = "ErrorConfirmPasswordLabel"
+        Me.ErrorConfirmPasswordLabel.Size = New System.Drawing.Size(15, 20)
+        Me.ErrorConfirmPasswordLabel.TabIndex = 16
+        Me.ErrorConfirmPasswordLabel.Text = "*"
         '
-        'Label10
+        'ErrorEmailLabel
         '
-        Me.Label10.AutoSize = True
-        Me.Label10.ForeColor = System.Drawing.Color.Red
-        Me.Label10.Location = New System.Drawing.Point(416, 152)
-        Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(15, 20)
-        Me.Label10.TabIndex = 17
-        Me.Label10.Text = "*"
+        Me.ErrorEmailLabel.AutoSize = True
+        Me.ErrorEmailLabel.ForeColor = System.Drawing.Color.Red
+        Me.ErrorEmailLabel.Location = New System.Drawing.Point(416, 152)
+        Me.ErrorEmailLabel.Name = "ErrorEmailLabel"
+        Me.ErrorEmailLabel.Size = New System.Drawing.Size(15, 20)
+        Me.ErrorEmailLabel.TabIndex = 17
+        Me.ErrorEmailLabel.Text = "*"
         '
-        'Label11
+        'ErrorQuestionLabel
         '
-        Me.Label11.AutoSize = True
-        Me.Label11.ForeColor = System.Drawing.Color.Red
-        Me.Label11.Location = New System.Drawing.Point(461, 184)
-        Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(15, 20)
-        Me.Label11.TabIndex = 18
-        Me.Label11.Text = "*"
+        Me.ErrorQuestionLabel.AutoSize = True
+        Me.ErrorQuestionLabel.ForeColor = System.Drawing.Color.Red
+        Me.ErrorQuestionLabel.Location = New System.Drawing.Point(461, 184)
+        Me.ErrorQuestionLabel.Name = "ErrorQuestionLabel"
+        Me.ErrorQuestionLabel.Size = New System.Drawing.Size(15, 20)
+        Me.ErrorQuestionLabel.TabIndex = 18
+        Me.ErrorQuestionLabel.Text = "*"
         '
-        'Label12
+        'ErrorAnswerLabel
         '
-        Me.Label12.AutoSize = True
-        Me.Label12.ForeColor = System.Drawing.Color.Red
-        Me.Label12.Location = New System.Drawing.Point(461, 216)
-        Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(15, 20)
-        Me.Label12.TabIndex = 19
-        Me.Label12.Text = "*"
+        Me.ErrorAnswerLabel.AutoSize = True
+        Me.ErrorAnswerLabel.ForeColor = System.Drawing.Color.Red
+        Me.ErrorAnswerLabel.Location = New System.Drawing.Point(461, 216)
+        Me.ErrorAnswerLabel.Name = "ErrorAnswerLabel"
+        Me.ErrorAnswerLabel.Size = New System.Drawing.Size(15, 20)
+        Me.ErrorAnswerLabel.TabIndex = 19
+        Me.ErrorAnswerLabel.Text = "*"
         '
         'RegisterGroupBox
         '
-        Me.RegisterGroupBox.Controls.Add(Me.Label12)
+        Me.RegisterGroupBox.Controls.Add(Me.ErrorAnswerLabel)
         Me.RegisterGroupBox.Controls.Add(Me.CancelButton)
-        Me.RegisterGroupBox.Controls.Add(Me.Label11)
+        Me.RegisterGroupBox.Controls.Add(Me.ErrorQuestionLabel)
         Me.RegisterGroupBox.Controls.Add(Me.RegisterButton)
-        Me.RegisterGroupBox.Controls.Add(Me.Label10)
-        Me.RegisterGroupBox.Controls.Add(Me.Label9)
-        Me.RegisterGroupBox.Controls.Add(Me.Label8)
-        Me.RegisterGroupBox.Controls.Add(Me.Label7)
+        Me.RegisterGroupBox.Controls.Add(Me.ErrorEmailLabel)
+        Me.RegisterGroupBox.Controls.Add(Me.ErrorConfirmPasswordLabel)
+        Me.RegisterGroupBox.Controls.Add(Me.ErrorPasswordLabel)
+        Me.RegisterGroupBox.Controls.Add(Me.ErrorUsernameLabel)
         Me.RegisterGroupBox.Controls.Add(Me.AnswerTextBox)
         Me.RegisterGroupBox.Controls.Add(Me.QuestionTextBox)
         Me.RegisterGroupBox.Controls.Add(Me.EmailTextBox)
@@ -283,11 +283,11 @@ Partial Class RegisterForm
     Friend WithEvents AnswerTextBox As TextBox
     Friend WithEvents RegisterButton As Button
     Friend WithEvents CancelButton As Button
-    Friend WithEvents Label7 As Label
-    Friend WithEvents Label8 As Label
-    Friend WithEvents Label9 As Label
-    Friend WithEvents Label10 As Label
-    Friend WithEvents Label11 As Label
-    Friend WithEvents Label12 As Label
+    Friend WithEvents ErrorUsernameLabel As Label
+    Friend WithEvents ErrorPasswordLabel As Label
+    Friend WithEvents ErrorConfirmPasswordLabel As Label
+    Friend WithEvents ErrorEmailLabel As Label
+    Friend WithEvents ErrorQuestionLabel As Label
+    Friend WithEvents ErrorAnswerLabel As Label
     Friend WithEvents RegisterGroupBox As GroupBox
 End Class
