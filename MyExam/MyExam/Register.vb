@@ -4,7 +4,7 @@ Public Class Register
     Inherits Member
 
     Public Function AddMember(member As Member) As Boolean
-        Dim stm = "INSERT INTO myexam_member (username_member, email_member, password_member, question_member, answer_member) VALUE(@username, @email, @password, @question, @answer)"
+        Dim stm = "INSERT INTO myexam_member(username_member, email_member, password_member, question_member, answer_member) VALUE(@username, @email, @password, @question, @answer)"
         Dim cmd As New MySqlCommand(stm, New MySqlConnection(CONNECTSTRING))
         cmd.Parameters.AddWithValue("@username", member.Username)
         cmd.Parameters.AddWithValue("@email", member.Email)

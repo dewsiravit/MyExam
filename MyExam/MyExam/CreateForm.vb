@@ -29,7 +29,7 @@
     End Sub
 
     Private Sub BackButton_Click(sender As Object, e As EventArgs) Handles BackButton.Click
-        MainForm.Show()
+        'MainForm.Show()
         Close()
     End Sub
 

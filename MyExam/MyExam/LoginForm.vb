@@ -1,8 +1,25 @@
 ﻿Public Class LoginForm
 
     Private Sub OK_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles OK.Click
-        MainForm.Show()
-        Close()
+        Dim member As New Login
+        member.Username = UsernameTextBox.Text
+        member.Password = PasswordTextBox.Text
+        If member.CheckUsername() Then
+            ErrorUsernameLabel.ResetText()
+        Else
+            ErrorUsernameLabel.Text = "*ไม่พบชื่อผู้ใช้นี้ในระบบ"
+            ErrorPasswordLabel.ResetText()
+            PasswordTextBox.Clear()
+            Exit Sub
+        End If
+        If member.CheckLogin() Then
+            Dim main As New MainForm(member)
+            main.Show()
+            Close()
+        Else
+            ErrorPasswordLabel.Text = "*รหัสผ่านไม่ถูกต้อง"
+            PasswordTextBox.Clear()
+        End If
     End Sub
 
     Private Sub Cancel_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Cancel.Click

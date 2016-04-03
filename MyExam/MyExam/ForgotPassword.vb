@@ -43,7 +43,7 @@ Public Class ForgotPassword
     Public Function ChangePassword(password As String) As Boolean
         Dim stm As String = "UPDATE myexam_member SET password_member = @password WHERE id_member = @id"
         Dim cmd As New MySqlCommand(stm, conn)
-        cmd.Parameters.AddWithValue("@password", password)
+        cmd.Parameters.AddWithValue("@password", SHA256(password))
         cmd.Parameters.AddWithValue("@id", ID)
         Try
             cmd.Connection.Open()

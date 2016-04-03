@@ -5,7 +5,7 @@
     End Sub
 
     Private Sub MainLinkLabel_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles MainLinkLabel.LinkClicked
-        MainForm.Show()
+        'MainForm.Show()
         Close()
     End Sub
 

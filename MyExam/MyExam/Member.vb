@@ -63,7 +63,7 @@ Public Class Member
         End Set
     End Property
 
-    Protected Function SHA256(str As String) As String
+    Public Function SHA256(str As String) As String
         Dim mySHA256 As SHA256 = Security.Cryptography.SHA256.Create()
         Dim encText As New UTF8Encoding()
         Dim hashValue() As Byte
