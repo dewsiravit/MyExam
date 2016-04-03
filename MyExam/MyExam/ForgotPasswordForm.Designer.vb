@@ -48,7 +48,7 @@ Partial Class ForgotPasswordForm
         Me.NameLabel.Name = "NameLabel"
         Me.NameLabel.Size = New System.Drawing.Size(119, 20)
         Me.NameLabel.TabIndex = 0
-        Me.NameLabel.Text = "ชื่อผู้ใช้ หรือ อีเมล์:"
+        Me.NameLabel.Text = "ชื่อผู้ใช้ หรือ อีเมล:"
         '
         'NameTextBox
         '
@@ -60,6 +60,7 @@ Partial Class ForgotPasswordForm
         'QuestionLabel
         '
         Me.QuestionLabel.AutoSize = True
+        Me.QuestionLabel.Enabled = False
         Me.QuestionLabel.Location = New System.Drawing.Point(112, 64)
         Me.QuestionLabel.Name = "QuestionLabel"
         Me.QuestionLabel.Size = New System.Drawing.Size(142, 20)
@@ -226,7 +227,6 @@ Partial Class ForgotPasswordForm
         'ForgotPasswordForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
-        Me.CancelButton = Me.CancelButton
         Me.ClientSize = New System.Drawing.Size(684, 461)
         Me.Controls.Add(Me.CancelButton)
         Me.Controls.Add(Me.ChangePasswordGroupBox)

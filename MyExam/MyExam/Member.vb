@@ -41,7 +41,7 @@ Public Class Member
             Return m_Password
         End Get
         Set(value As String)
-            m_Password = SHA256(value)
+            m_Password = value
         End Set
     End Property
 
@@ -59,11 +59,11 @@ Public Class Member
             Return m_Answer
         End Get
         Set(value As String)
-            m_Answer = SHA256(value)
+            m_Answer = value
         End Set
     End Property
 
-    Private Function SHA256(str As String) As String
+    Protected Function SHA256(str As String) As String
         Dim mySHA256 As SHA256 = Security.Cryptography.SHA256.Create()
         Dim encText As New UTF8Encoding()
         Dim hashValue() As Byte

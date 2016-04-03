@@ -131,6 +131,7 @@
     <Compile Include="CreateWriteForm.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="ForgotPassword.vb" />
     <Compile Include="ForgotPasswordForm.Designer.vb">
       <DependentUpon>ForgotPasswordForm.vb</DependentUpon>
     </Compile>

@@ -298,7 +298,7 @@ Partial Class ProfileForm
         Me.EmailLabel.Name = "EmailLabel"
         Me.EmailLabel.Size = New System.Drawing.Size(45, 20)
         Me.EmailLabel.TabIndex = 23
-        Me.EmailLabel.Text = "อีเมล์:"
+        Me.EmailLabel.Text = "อีเมล:"
         '
         'PasswordLabel
         '

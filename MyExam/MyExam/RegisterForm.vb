@@ -35,26 +35,8 @@
         member.Email = EmailTextBox.Text
         member.Question = QuestionTextBox.Text
         member.Answer = AnswerTextBox.Text
-        If member.AddtoDatabase(member) Then
+        If member.AddMember(member) Then
             MessageBox.Show("สมัครสมาชิกเรียบร้อยแล้ว", "MyExam", MessageBoxButtons.OK, MessageBoxIcon.Information)
         End If
-    End Sub
-
-    Private Sub ClearData()
-        'Clear Textbox
-        UsernameTextBox.Clear()
-        PasswordTextBox.Clear()
-        PasswordComfirmTextBox.Clear()
-        EmailTextBox.Clear()
-        QuestionTextBox.Clear()
-        AnswerTextBox.Clear()
-
-        'Clear Error Label
-        ErrorUsernameLabel.Text = "*"
-        ErrorPasswordLabel.Text = "*"
-        ErrorPasswordConfirmLabel.Text = "*"
-        ErrorEmailLabel.Text = "*"
-        ErrorQuestionLabel.Text = "*"
-        ErrorAnswerLabel.Text = "*"
     End Sub
 End Class
