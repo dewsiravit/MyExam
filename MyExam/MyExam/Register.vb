@@ -16,7 +16,7 @@ Public Class Register
             cmd.Connection.Close()
             Return True
         Catch ex As MySqlException
-            MessageBox.Show("ไม่สารถสมัครสมาชิกได้ โปรตรวจสอบการเชื่อมต่อ Database" & vbNewLine & ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
             Return False
         End Try
     End Function

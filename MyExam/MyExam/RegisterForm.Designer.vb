@@ -35,7 +35,7 @@ Partial Class RegisterForm
         Me.CancelButton = New System.Windows.Forms.Button()
         Me.ErrorUsernameLabel = New System.Windows.Forms.Label()
         Me.ErrorPasswordLabel = New System.Windows.Forms.Label()
-        Me.ErrorConfirmPasswordLabel = New System.Windows.Forms.Label()
+        Me.ErrorPasswordConfirmLabel = New System.Windows.Forms.Label()
         Me.ErrorEmailLabel = New System.Windows.Forms.Label()
         Me.ErrorQuestionLabel = New System.Windows.Forms.Label()
         Me.ErrorAnswerLabel = New System.Windows.Forms.Label()
@@ -186,15 +186,15 @@ Partial Class RegisterForm
         Me.ErrorPasswordLabel.TabIndex = 15
         Me.ErrorPasswordLabel.Text = "*"
         '
-        'ErrorConfirmPasswordLabel
+        'ErrorPasswordConfirmLabel
         '
-        Me.ErrorConfirmPasswordLabel.AutoSize = True
-        Me.ErrorConfirmPasswordLabel.ForeColor = System.Drawing.Color.Red
-        Me.ErrorConfirmPasswordLabel.Location = New System.Drawing.Point(461, 120)
-        Me.ErrorConfirmPasswordLabel.Name = "ErrorConfirmPasswordLabel"
-        Me.ErrorConfirmPasswordLabel.Size = New System.Drawing.Size(15, 20)
-        Me.ErrorConfirmPasswordLabel.TabIndex = 16
-        Me.ErrorConfirmPasswordLabel.Text = "*"
+        Me.ErrorPasswordConfirmLabel.AutoSize = True
+        Me.ErrorPasswordConfirmLabel.ForeColor = System.Drawing.Color.Red
+        Me.ErrorPasswordConfirmLabel.Location = New System.Drawing.Point(461, 120)
+        Me.ErrorPasswordConfirmLabel.Name = "ErrorPasswordConfirmLabel"
+        Me.ErrorPasswordConfirmLabel.Size = New System.Drawing.Size(15, 20)
+        Me.ErrorPasswordConfirmLabel.TabIndex = 16
+        Me.ErrorPasswordConfirmLabel.Text = "*"
         '
         'ErrorEmailLabel
         '
@@ -233,7 +233,7 @@ Partial Class RegisterForm
         Me.RegisterGroupBox.Controls.Add(Me.ErrorQuestionLabel)
         Me.RegisterGroupBox.Controls.Add(Me.RegisterButton)
         Me.RegisterGroupBox.Controls.Add(Me.ErrorEmailLabel)
-        Me.RegisterGroupBox.Controls.Add(Me.ErrorConfirmPasswordLabel)
+        Me.RegisterGroupBox.Controls.Add(Me.ErrorPasswordConfirmLabel)
         Me.RegisterGroupBox.Controls.Add(Me.ErrorPasswordLabel)
         Me.RegisterGroupBox.Controls.Add(Me.ErrorUsernameLabel)
         Me.RegisterGroupBox.Controls.Add(Me.AnswerTextBox)
@@ -285,7 +285,7 @@ Partial Class RegisterForm
     Friend WithEvents CancelButton As Button
     Friend WithEvents ErrorUsernameLabel As Label
     Friend WithEvents ErrorPasswordLabel As Label
-    Friend WithEvents ErrorConfirmPasswordLabel As Label
+    Friend WithEvents ErrorPasswordConfirmLabel As Label
     Friend WithEvents ErrorEmailLabel As Label
     Friend WithEvents ErrorQuestionLabel As Label
     Friend WithEvents ErrorAnswerLabel As Label
