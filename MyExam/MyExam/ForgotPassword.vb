@@ -2,10 +2,10 @@
 Imports MyExam.ConnectDatabase
 Public Class ForgotPassword
     Inherits Member
-    Private cmd As MySqlCommand
+    Private conn As New MySqlConnection(CONNECTSTRING)
     Public Function CheckUser(name As String) As Boolean
         Dim stm As String = "Select * From myexam_member Where username_member = @name OR email_member = @name"
-        cmd = New MySqlCommand(stm, New MySqlConnection(CONNECTSTRING))
+        Dim cmd As New MySqlCommand(stm, conn)
         cmd.Parameters.AddWithValue("@name", name)
         Try
             cmd.Connection.Open()
@@ -20,6 +20,7 @@ Public Class ForgotPassword
                     Question = result.Item("question_member")
                     Answer = result.Item("answer_member")
                 End While
+                cmd.Connection.Close()
                 Return True
             Else
                 Return False
@@ -37,5 +38,21 @@ Public Class ForgotPassword
         Else
             Return False
         End If
+    End Function
+
+    Public Function ChangePassword(password As String) As Boolean
+        Dim stm As String = "UPDATE myexam_member SET password_member = @password WHERE id_member = @id"
+        Dim cmd As New MySqlCommand(stm, conn)
+        cmd.Parameters.AddWithValue("@password", password)
+        cmd.Parameters.AddWithValue("@id", ID)
+        Try
+            cmd.Connection.Open()
+            cmd.ExecuteNonQuery()
+            cmd.Connection.Close()
+            Return True
+        Catch ex As MySqlException
+            MessageBox.Show(ex.Message, "Error " & ex.Number, MessageBoxButtons.OK, MessageBoxIcon.Error)
+            Return False
+        End Try
     End Function
 End Class

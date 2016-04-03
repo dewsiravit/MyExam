@@ -48,10 +48,18 @@
     Private Sub SendAnswerButton_Click(sender As Object, e As EventArgs) Handles SendAnswerButton.Click
         If member.CheckAnsewr(AnswerTextBox.Text) Then
             ErrorAnswerLabel.ResetText()
+            VerifyGroupBox.Enabled = False
+            ChangePasswordGroupBox.Visible = True
         Else
             ErrorAnswerLabel.Text = "*คำตอบไม่ถูกต้อง"
             AnswerTextBox.Clear()
             AnswerTextBox.Focus()
+        End If
+    End Sub
+
+    Private Sub ChangePasswordButton_Click(sender As Object, e As EventArgs) Handles ChangePasswordButton.Click
+        If member.ChangePassword(NewPasswordConfirmTextBox.Text) Then
+            MessageBox.Show("เปลี่ยนรหัสผ่านเรียบร้อยแล้ว", "MyExam", MessageBoxButtons.OK, MessageBoxIcon.Information)
         End If
     End Sub
 End Class
