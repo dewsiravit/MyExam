@@ -27,4 +27,14 @@
     Private Sub AnswerLabel_Click(sender As Object, e As EventArgs) Handles AnswerLabel.Click
         AnswerTextBox.Focus()
     End Sub
+
+    Private Sub RegisterButton_Click(sender As Object, e As EventArgs) Handles RegisterButton.Click
+        Dim member As New Register
+        member.Username = UsernameTextBox.Text
+        member.Password = PasswordComfirmTextBox.Text
+        member.Email = EmailTextBox.Text
+        member.Question = QuestionTextBox.Text
+        member.Answer = AnswerTextBox.Text
+        member.AddtoDatabase(member)
+    End Sub
 End Class

@@ -107,14 +107,14 @@ Partial Class RegisterForm
         '
         Me.UsernameTextBox.Location = New System.Drawing.Point(268, 53)
         Me.UsernameTextBox.Name = "UsernameTextBox"
-        Me.UsernameTextBox.Size = New System.Drawing.Size(142, 26)
+        Me.UsernameTextBox.Size = New System.Drawing.Size(187, 26)
         Me.UsernameTextBox.TabIndex = 6
         '
         'PasswordTextBox
         '
         Me.PasswordTextBox.Location = New System.Drawing.Point(268, 85)
         Me.PasswordTextBox.Name = "PasswordTextBox"
-        Me.PasswordTextBox.Size = New System.Drawing.Size(142, 26)
+        Me.PasswordTextBox.Size = New System.Drawing.Size(187, 26)
         Me.PasswordTextBox.TabIndex = 7
         Me.PasswordTextBox.UseSystemPasswordChar = True
         '
@@ -122,7 +122,7 @@ Partial Class RegisterForm
         '
         Me.PasswordComfirmTextBox.Location = New System.Drawing.Point(268, 117)
         Me.PasswordComfirmTextBox.Name = "PasswordComfirmTextBox"
-        Me.PasswordComfirmTextBox.Size = New System.Drawing.Size(142, 26)
+        Me.PasswordComfirmTextBox.Size = New System.Drawing.Size(187, 26)
         Me.PasswordComfirmTextBox.TabIndex = 8
         Me.PasswordComfirmTextBox.UseSystemPasswordChar = True
         '
@@ -130,7 +130,7 @@ Partial Class RegisterForm
         '
         Me.EmailTextBox.Location = New System.Drawing.Point(268, 149)
         Me.EmailTextBox.Name = "EmailTextBox"
-        Me.EmailTextBox.Size = New System.Drawing.Size(142, 26)
+        Me.EmailTextBox.Size = New System.Drawing.Size(187, 26)
         Me.EmailTextBox.TabIndex = 9
         '
         'QuestionTextBox
@@ -170,7 +170,7 @@ Partial Class RegisterForm
         '
         Me.ErrorUsernameLabel.AutoSize = True
         Me.ErrorUsernameLabel.ForeColor = System.Drawing.Color.Red
-        Me.ErrorUsernameLabel.Location = New System.Drawing.Point(416, 56)
+        Me.ErrorUsernameLabel.Location = New System.Drawing.Point(461, 56)
         Me.ErrorUsernameLabel.Name = "ErrorUsernameLabel"
         Me.ErrorUsernameLabel.Size = New System.Drawing.Size(15, 20)
         Me.ErrorUsernameLabel.TabIndex = 14
@@ -180,7 +180,7 @@ Partial Class RegisterForm
         '
         Me.ErrorPasswordLabel.AutoSize = True
         Me.ErrorPasswordLabel.ForeColor = System.Drawing.Color.Red
-        Me.ErrorPasswordLabel.Location = New System.Drawing.Point(416, 88)
+        Me.ErrorPasswordLabel.Location = New System.Drawing.Point(461, 88)
         Me.ErrorPasswordLabel.Name = "ErrorPasswordLabel"
         Me.ErrorPasswordLabel.Size = New System.Drawing.Size(15, 20)
         Me.ErrorPasswordLabel.TabIndex = 15
@@ -190,7 +190,7 @@ Partial Class RegisterForm
         '
         Me.ErrorConfirmPasswordLabel.AutoSize = True
         Me.ErrorConfirmPasswordLabel.ForeColor = System.Drawing.Color.Red
-        Me.ErrorConfirmPasswordLabel.Location = New System.Drawing.Point(416, 120)
+        Me.ErrorConfirmPasswordLabel.Location = New System.Drawing.Point(461, 120)
         Me.ErrorConfirmPasswordLabel.Name = "ErrorConfirmPasswordLabel"
         Me.ErrorConfirmPasswordLabel.Size = New System.Drawing.Size(15, 20)
         Me.ErrorConfirmPasswordLabel.TabIndex = 16
@@ -200,7 +200,7 @@ Partial Class RegisterForm
         '
         Me.ErrorEmailLabel.AutoSize = True
         Me.ErrorEmailLabel.ForeColor = System.Drawing.Color.Red
-        Me.ErrorEmailLabel.Location = New System.Drawing.Point(416, 152)
+        Me.ErrorEmailLabel.Location = New System.Drawing.Point(461, 155)
         Me.ErrorEmailLabel.Name = "ErrorEmailLabel"
         Me.ErrorEmailLabel.Size = New System.Drawing.Size(15, 20)
         Me.ErrorEmailLabel.TabIndex = 17
