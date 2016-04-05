@@ -131,15 +131,12 @@
     <Compile Include="CreateWriteForm.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ForgotPassword.vb" />
     <Compile Include="ForgotPasswordForm.Designer.vb">
       <DependentUpon>ForgotPasswordForm.vb</DependentUpon>
     </Compile>
     <Compile Include="ForgotPasswordForm.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Login.vb" />
-    <Compile Include="Register.vb" />
     <Compile Include="LoginForm.Designer.vb">
       <DependentUpon>LoginForm.vb</DependentUpon>
     </Compile>

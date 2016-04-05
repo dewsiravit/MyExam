@@ -1,5 +1,13 @@
 ﻿Public Class CreateForm
     Private Const PINSUGGEST = "กำหนดรหัส"
+    Sub New(member As Member)
+
+        ' This call is required by the designer.
+        InitializeComponent()
+
+        ' Add any initialization after the InitializeComponent() call.
+        Me.member = member
+    End Sub
     Private Sub CreateForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         TypeComboBox.SelectedIndex = 0
         PublicRadioButton.Checked = True
@@ -88,15 +96,20 @@
     Private Sub NextButton_Click(sender As Object, e As EventArgs) Handles NextButton.Click
         Select Case TypeComboBox.SelectedIndex
             Case 0
-                CreateChoiceForm.Show()
+                Dim choice As New CreateChoiceForm(member)
+                choice.show()
             Case 1
-                CreateWriteForm.Show()
+                Dim write As New CreateChoiceForm(member)
+                write.Show()
             Case 3
-                CreateMatchForm.show()
+                Dim match As New CreateChoiceForm(member)
+                match.Show()
             Case 2
-                CreateBlankForm.Show()
+                Dim blank As New CreateChoiceForm(member)
+                blank.Show()
             Case 4
-                CreateTrueFalseForm.Show()
+                Dim truefalse As New CreateChoiceForm(member)
+                truefalse.Show()
         End Select
         Close()
     End Sub

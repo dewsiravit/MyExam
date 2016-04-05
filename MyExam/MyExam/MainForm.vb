@@ -1,6 +1,6 @@
 ﻿Public Class MainForm
-    Private member As New Login
-    Sub New(member As Login)
+
+    Sub New(member As Member)
 
         ' This call is required by the designer.
         InitializeComponent()
@@ -8,14 +8,15 @@
         ' Add any initialization after the InitializeComponent() call.
         Me.member = member
     End Sub
+
     Private Sub CreateButton_Click(sender As Object, e As EventArgs) Handles CreateButton.Click
-        CreateForm.Show()
+        Dim create As New CreateForm(member)
+        create.Show()
         Close()
     End Sub
 
     Private Sub MainForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         MainLinkLabel.Hide()
-        WelcomeLabel.Text = "ยินดีต้อนรับ " & member.Username
         ActiveControl = SearchTextBox
     End Sub
 
