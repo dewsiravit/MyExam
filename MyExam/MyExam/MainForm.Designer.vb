@@ -112,7 +112,7 @@ Partial Class MainForm
         'CreateButton
         '
         Me.CreateButton.AutoSize = True
-        Me.CreateButton.Location = New System.Drawing.Point(271, 12)
+        Me.CreateButton.Location = New System.Drawing.Point(259, 9)
         Me.CreateButton.Name = "CreateButton"
         Me.CreateButton.Size = New System.Drawing.Size(119, 30)
         Me.CreateButton.TabIndex = 6

@@ -16,7 +16,6 @@
     End Sub
 
     Private Sub MainForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        MainLinkLabel.Hide()
         ActiveControl = SearchTextBox
     End Sub
 

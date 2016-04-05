@@ -60,7 +60,7 @@ Partial Class BaseMainForm
         Me.MainLinkLabel.Location = New System.Drawing.Point(426, 9)
         Me.MainLinkLabel.Name = "MainLinkLabel"
         Me.MainLinkLabel.Size = New System.Drawing.Size(60, 20)
-        Me.MainLinkLabel.TabIndex = 6
+        Me.MainLinkLabel.TabIndex = 7
         Me.MainLinkLabel.TabStop = True
         Me.MainLinkLabel.Text = "หน้าหลัก"
         '
