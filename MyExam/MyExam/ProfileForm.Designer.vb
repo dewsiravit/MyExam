@@ -24,17 +24,17 @@ Partial Class ProfileForm
         Me.Label6 = New System.Windows.Forms.Label()
         Me.ConfirmEditTextBox = New System.Windows.Forms.TextBox()
         Me.ConfirmEditLabel = New System.Windows.Forms.Label()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.ConfirmChangePasswordTextBox = New System.Windows.Forms.TextBox()
-        Me.ConfirmChangePasswordLabel = New System.Windows.Forms.Label()
-        Me.Label1 = New System.Windows.Forms.Label()
+        Me.ErrorConfirmChangePasswordLabel = New System.Windows.Forms.Label()
+        Me.ChangePasswordConfirmTextBox = New System.Windows.Forms.TextBox()
+        Me.ChangePasswordConfirmLabel = New System.Windows.Forms.Label()
+        Me.ErrorChangePasswordLabel = New System.Windows.Forms.Label()
         Me.ChangePasswordTextBox = New System.Windows.Forms.TextBox()
         Me.ChangePasswordLabel = New System.Windows.Forms.Label()
         Me.EditButton = New System.Windows.Forms.Button()
-        Me.Label12 = New System.Windows.Forms.Label()
-        Me.Label11 = New System.Windows.Forms.Label()
-        Me.Label10 = New System.Windows.Forms.Label()
-        Me.Label8 = New System.Windows.Forms.Label()
+        Me.ErrorAnswerLabel = New System.Windows.Forms.Label()
+        Me.ErrorQuestionLabel = New System.Windows.Forms.Label()
+        Me.ErrorEmailLabel = New System.Windows.Forms.Label()
+        Me.ErrorPasswordLabel = New System.Windows.Forms.Label()
         Me.AnswerTextBox = New System.Windows.Forms.TextBox()
         Me.QuestionTextBox = New System.Windows.Forms.TextBox()
         Me.EmailTextBox = New System.Windows.Forms.TextBox()
@@ -71,17 +71,17 @@ Partial Class ProfileForm
         Me.ProfileTabPage.Controls.Add(Me.Label6)
         Me.ProfileTabPage.Controls.Add(Me.ConfirmEditTextBox)
         Me.ProfileTabPage.Controls.Add(Me.ConfirmEditLabel)
-        Me.ProfileTabPage.Controls.Add(Me.Label3)
-        Me.ProfileTabPage.Controls.Add(Me.ConfirmChangePasswordTextBox)
-        Me.ProfileTabPage.Controls.Add(Me.ConfirmChangePasswordLabel)
-        Me.ProfileTabPage.Controls.Add(Me.Label1)
+        Me.ProfileTabPage.Controls.Add(Me.ErrorConfirmChangePasswordLabel)
+        Me.ProfileTabPage.Controls.Add(Me.ChangePasswordConfirmTextBox)
+        Me.ProfileTabPage.Controls.Add(Me.ChangePasswordConfirmLabel)
+        Me.ProfileTabPage.Controls.Add(Me.ErrorChangePasswordLabel)
         Me.ProfileTabPage.Controls.Add(Me.ChangePasswordTextBox)
         Me.ProfileTabPage.Controls.Add(Me.ChangePasswordLabel)
         Me.ProfileTabPage.Controls.Add(Me.EditButton)
-        Me.ProfileTabPage.Controls.Add(Me.Label12)
-        Me.ProfileTabPage.Controls.Add(Me.Label11)
-        Me.ProfileTabPage.Controls.Add(Me.Label10)
-        Me.ProfileTabPage.Controls.Add(Me.Label8)
+        Me.ProfileTabPage.Controls.Add(Me.ErrorAnswerLabel)
+        Me.ProfileTabPage.Controls.Add(Me.ErrorQuestionLabel)
+        Me.ProfileTabPage.Controls.Add(Me.ErrorEmailLabel)
+        Me.ProfileTabPage.Controls.Add(Me.ErrorPasswordLabel)
         Me.ProfileTabPage.Controls.Add(Me.AnswerTextBox)
         Me.ProfileTabPage.Controls.Add(Me.QuestionTextBox)
         Me.ProfileTabPage.Controls.Add(Me.EmailTextBox)
@@ -109,6 +109,7 @@ Partial Class ProfileForm
         Me.Label6.Size = New System.Drawing.Size(15, 20)
         Me.Label6.TabIndex = 47
         Me.Label6.Text = "*"
+        Me.Label6.Visible = False
         '
         'ConfirmEditTextBox
         '
@@ -127,43 +128,45 @@ Partial Class ProfileForm
         Me.ConfirmEditLabel.TabIndex = 45
         Me.ConfirmEditLabel.Text = "กรุณาใส่รหัสผ่าน หากต้องการแก้ไขข้อมูล:"
         '
-        'Label3
+        'ErrorConfirmChangePasswordLabel
         '
-        Me.Label3.AutoSize = True
-        Me.Label3.ForeColor = System.Drawing.Color.Red
-        Me.Label3.Location = New System.Drawing.Point(476, 230)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(15, 20)
-        Me.Label3.TabIndex = 44
-        Me.Label3.Text = "*"
+        Me.ErrorConfirmChangePasswordLabel.AutoSize = True
+        Me.ErrorConfirmChangePasswordLabel.ForeColor = System.Drawing.Color.Red
+        Me.ErrorConfirmChangePasswordLabel.Location = New System.Drawing.Point(476, 230)
+        Me.ErrorConfirmChangePasswordLabel.Name = "ErrorConfirmChangePasswordLabel"
+        Me.ErrorConfirmChangePasswordLabel.Size = New System.Drawing.Size(15, 20)
+        Me.ErrorConfirmChangePasswordLabel.TabIndex = 44
+        Me.ErrorConfirmChangePasswordLabel.Text = "*"
+        Me.ErrorConfirmChangePasswordLabel.Visible = False
         '
-        'ConfirmChangePasswordTextBox
+        'ChangePasswordConfirmTextBox
         '
-        Me.ConfirmChangePasswordTextBox.Location = New System.Drawing.Point(328, 227)
-        Me.ConfirmChangePasswordTextBox.Name = "ConfirmChangePasswordTextBox"
-        Me.ConfirmChangePasswordTextBox.Size = New System.Drawing.Size(142, 26)
-        Me.ConfirmChangePasswordTextBox.TabIndex = 43
-        Me.ConfirmChangePasswordTextBox.UseSystemPasswordChar = True
+        Me.ChangePasswordConfirmTextBox.Location = New System.Drawing.Point(328, 227)
+        Me.ChangePasswordConfirmTextBox.Name = "ChangePasswordConfirmTextBox"
+        Me.ChangePasswordConfirmTextBox.Size = New System.Drawing.Size(142, 26)
+        Me.ChangePasswordConfirmTextBox.TabIndex = 43
+        Me.ChangePasswordConfirmTextBox.UseSystemPasswordChar = True
         '
-        'ConfirmChangePasswordLabel
+        'ChangePasswordConfirmLabel
         '
-        Me.ConfirmChangePasswordLabel.AutoSize = True
-        Me.ConfirmChangePasswordLabel.Location = New System.Drawing.Point(150, 233)
-        Me.ConfirmChangePasswordLabel.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.ConfirmChangePasswordLabel.Name = "ConfirmChangePasswordLabel"
-        Me.ConfirmChangePasswordLabel.Size = New System.Drawing.Size(126, 20)
-        Me.ConfirmChangePasswordLabel.TabIndex = 42
-        Me.ConfirmChangePasswordLabel.Text = "ยืนยัน รหัสผ่านใหม่:"
+        Me.ChangePasswordConfirmLabel.AutoSize = True
+        Me.ChangePasswordConfirmLabel.Location = New System.Drawing.Point(150, 233)
+        Me.ChangePasswordConfirmLabel.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.ChangePasswordConfirmLabel.Name = "ChangePasswordConfirmLabel"
+        Me.ChangePasswordConfirmLabel.Size = New System.Drawing.Size(126, 20)
+        Me.ChangePasswordConfirmLabel.TabIndex = 42
+        Me.ChangePasswordConfirmLabel.Text = "ยืนยัน รหัสผ่านใหม่:"
         '
-        'Label1
+        'ErrorChangePasswordLabel
         '
-        Me.Label1.AutoSize = True
-        Me.Label1.ForeColor = System.Drawing.Color.Red
-        Me.Label1.Location = New System.Drawing.Point(476, 198)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(15, 20)
-        Me.Label1.TabIndex = 41
-        Me.Label1.Text = "*"
+        Me.ErrorChangePasswordLabel.AutoSize = True
+        Me.ErrorChangePasswordLabel.ForeColor = System.Drawing.Color.Red
+        Me.ErrorChangePasswordLabel.Location = New System.Drawing.Point(476, 198)
+        Me.ErrorChangePasswordLabel.Name = "ErrorChangePasswordLabel"
+        Me.ErrorChangePasswordLabel.Size = New System.Drawing.Size(15, 20)
+        Me.ErrorChangePasswordLabel.TabIndex = 41
+        Me.ErrorChangePasswordLabel.Text = "*"
+        Me.ErrorChangePasswordLabel.Visible = False
         '
         'ChangePasswordTextBox
         '
@@ -193,45 +196,49 @@ Partial Class ProfileForm
         Me.EditButton.Text = "แก้ไขข้อมูล"
         Me.EditButton.UseVisualStyleBackColor = True
         '
-        'Label12
+        'ErrorAnswerLabel
         '
-        Me.Label12.AutoSize = True
-        Me.Label12.ForeColor = System.Drawing.Color.Red
-        Me.Label12.Location = New System.Drawing.Point(521, 152)
-        Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(15, 20)
-        Me.Label12.TabIndex = 37
-        Me.Label12.Text = "*"
+        Me.ErrorAnswerLabel.AutoSize = True
+        Me.ErrorAnswerLabel.ForeColor = System.Drawing.Color.Red
+        Me.ErrorAnswerLabel.Location = New System.Drawing.Point(521, 152)
+        Me.ErrorAnswerLabel.Name = "ErrorAnswerLabel"
+        Me.ErrorAnswerLabel.Size = New System.Drawing.Size(15, 20)
+        Me.ErrorAnswerLabel.TabIndex = 37
+        Me.ErrorAnswerLabel.Text = "*"
+        Me.ErrorAnswerLabel.Visible = False
         '
-        'Label11
+        'ErrorQuestionLabel
         '
-        Me.Label11.AutoSize = True
-        Me.Label11.ForeColor = System.Drawing.Color.Red
-        Me.Label11.Location = New System.Drawing.Point(521, 120)
-        Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(15, 20)
-        Me.Label11.TabIndex = 36
-        Me.Label11.Text = "*"
+        Me.ErrorQuestionLabel.AutoSize = True
+        Me.ErrorQuestionLabel.ForeColor = System.Drawing.Color.Red
+        Me.ErrorQuestionLabel.Location = New System.Drawing.Point(521, 120)
+        Me.ErrorQuestionLabel.Name = "ErrorQuestionLabel"
+        Me.ErrorQuestionLabel.Size = New System.Drawing.Size(15, 20)
+        Me.ErrorQuestionLabel.TabIndex = 36
+        Me.ErrorQuestionLabel.Text = "*"
+        Me.ErrorQuestionLabel.Visible = False
         '
-        'Label10
+        'ErrorEmailLabel
         '
-        Me.Label10.AutoSize = True
-        Me.Label10.ForeColor = System.Drawing.Color.Red
-        Me.Label10.Location = New System.Drawing.Point(476, 88)
-        Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(15, 20)
-        Me.Label10.TabIndex = 35
-        Me.Label10.Text = "*"
+        Me.ErrorEmailLabel.AutoSize = True
+        Me.ErrorEmailLabel.ForeColor = System.Drawing.Color.Red
+        Me.ErrorEmailLabel.Location = New System.Drawing.Point(521, 88)
+        Me.ErrorEmailLabel.Name = "ErrorEmailLabel"
+        Me.ErrorEmailLabel.Size = New System.Drawing.Size(15, 20)
+        Me.ErrorEmailLabel.TabIndex = 35
+        Me.ErrorEmailLabel.Text = "*"
+        Me.ErrorEmailLabel.Visible = False
         '
-        'Label8
+        'ErrorPasswordLabel
         '
-        Me.Label8.AutoSize = True
-        Me.Label8.ForeColor = System.Drawing.Color.Red
-        Me.Label8.Location = New System.Drawing.Point(476, 56)
-        Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(15, 20)
-        Me.Label8.TabIndex = 33
-        Me.Label8.Text = "*"
+        Me.ErrorPasswordLabel.AutoSize = True
+        Me.ErrorPasswordLabel.ForeColor = System.Drawing.Color.Red
+        Me.ErrorPasswordLabel.Location = New System.Drawing.Point(476, 56)
+        Me.ErrorPasswordLabel.Name = "ErrorPasswordLabel"
+        Me.ErrorPasswordLabel.Size = New System.Drawing.Size(15, 20)
+        Me.ErrorPasswordLabel.TabIndex = 33
+        Me.ErrorPasswordLabel.Text = "*"
+        Me.ErrorPasswordLabel.Visible = False
         '
         'AnswerTextBox
         '
@@ -251,7 +258,7 @@ Partial Class ProfileForm
         '
         Me.EmailTextBox.Location = New System.Drawing.Point(328, 85)
         Me.EmailTextBox.Name = "EmailTextBox"
-        Me.EmailTextBox.Size = New System.Drawing.Size(142, 26)
+        Me.EmailTextBox.Size = New System.Drawing.Size(187, 26)
         Me.EmailTextBox.TabIndex = 29
         '
         'PasswordTextBox
@@ -380,10 +387,10 @@ Partial Class ProfileForm
     Friend WithEvents TestScoreTabPage As TabPage
     Friend WithEvents TestListTreeView As TreeView
     Friend WithEvents TestScoreTreeView As TreeView
-    Friend WithEvents Label12 As Label
-    Friend WithEvents Label11 As Label
-    Friend WithEvents Label10 As Label
-    Friend WithEvents Label8 As Label
+    Friend WithEvents ErrorAnswerLabel As Label
+    Friend WithEvents ErrorQuestionLabel As Label
+    Friend WithEvents ErrorEmailLabel As Label
+    Friend WithEvents ErrorPasswordLabel As Label
     Friend WithEvents AnswerTextBox As TextBox
     Friend WithEvents QuestionTextBox As TextBox
     Friend WithEvents EmailTextBox As TextBox
@@ -397,10 +404,10 @@ Partial Class ProfileForm
     Friend WithEvents Label6 As Label
     Friend WithEvents ConfirmEditTextBox As TextBox
     Friend WithEvents ConfirmEditLabel As Label
-    Friend WithEvents Label3 As Label
-    Friend WithEvents ConfirmChangePasswordTextBox As TextBox
-    Friend WithEvents ConfirmChangePasswordLabel As Label
-    Friend WithEvents Label1 As Label
+    Friend WithEvents ErrorConfirmChangePasswordLabel As Label
+    Friend WithEvents ChangePasswordConfirmTextBox As TextBox
+    Friend WithEvents ChangePasswordConfirmLabel As Label
+    Friend WithEvents ErrorChangePasswordLabel As Label
     Friend WithEvents ChangePasswordTextBox As TextBox
     Friend WithEvents ChangePasswordLabel As Label
     Friend WithEvents EditButton As Button
