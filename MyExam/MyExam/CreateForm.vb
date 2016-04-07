@@ -1,5 +1,6 @@
 ﻿Public Class CreateForm
     Private Const PINSUGGEST = "กำหนดรหัส"
+    Private myTest As New Test
     Sub New(member As Member)
 
         ' This call is required by the designer.
