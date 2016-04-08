@@ -1,16 +1,17 @@
 ﻿Public Class Test
     Private m_ID As Integer
     Private m_Name As String
-    Public Enum Type
-        เลือกคำตอบ
-        เติมคำตอบ
-        เขียนคำตอบ
-        จับคู่
-        ถูกผิด
-    End Enum
+    Private m_type As TestType
     Private m_Access As String
     Private m_Time As Double
     Private m_Information As New ArrayList
+    Enum TestType
+        choice
+        blank
+        write
+        match
+        truefalse
+    End Enum
 
     Public Property ID As Integer
         Get
@@ -47,13 +48,21 @@
             m_Time = value
         End Set
     End Property
-    'test
-    Public Property Information As ArrayList
+
+    Public Property Type As TestType
         Get
-            Return m_Information
+            Return m_type
         End Get
-        Set(value As ArrayList)
-            m_Information = value
+        Set(value As TestType)
+            m_type = value
         End Set
     End Property
+
+    Public Sub addInformation(value As String)
+        m_Information.Add(value)
+    End Sub
+
+    Public Function getInformation(index As Integer) As String
+        Return m_Information.Item(index)
+    End Function
 End Class

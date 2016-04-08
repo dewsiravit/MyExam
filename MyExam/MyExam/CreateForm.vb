@@ -38,13 +38,15 @@
     End Sub
 
     Private Sub BackButton_Click(sender As Object, e As EventArgs) Handles BackButton.Click
-        'MainForm.Show()
+        Dim main As New MainForm(member)
+        main.show()
         Close()
     End Sub
 
     Private Sub LimitTimeRadioButton_CheckedChanged(sender As Object, e As EventArgs) Handles LimitTimeRadioButton.CheckedChanged
         If LimitTimeRadioButton.Checked Then
             TimeTextBox.Enabled = True
+            TimeTextBox.Focus()
         Else
             TimeTextBox.Enabled = False
         End If
@@ -95,10 +97,30 @@
     End Sub
 
     Private Sub NextButton_Click(sender As Object, e As EventArgs) Handles NextButton.Click
+        If PinTextBox.Enabled Then
+            myTest.Access = PinTextBox.Text
+        End If
+        Try
+            If myTest.Name = "" Then
+                Throw New Exception("กรุณาใส่ชื่อแบบทดสอบ")
+            ElseIf myTest.Access = PINSUGGEST And PinTextBox.Enabled Then
+                Throw New Exception("กรุณาใส่รหัสเพื่อเข้าถึงแบบทดสอบ")
+            ElseIf InformationCheckedListBox.CheckedItems.Count = 0 Then
+                Throw New Exception("กรุณาเลือกข้อมูลผู้เข้าสอบอย่างน้อย 1 รายการ")
+            End If
+        Catch ex As Exception
+            MessageBox.Show(ex.Message, "ผิดพลาด", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            Exit Sub
+        End Try
+
+        For Each i As String In InformationCheckedListBox.CheckedItems
+            myTest.addInformation(i)
+        Next
+
         Select Case TypeComboBox.SelectedIndex
             Case 0
                 Dim choice As New CreateChoiceForm(member)
-                choice.show()
+                choice.Show()
             Case 1
                 Dim write As New CreateChoiceForm(member)
                 write.Show()
@@ -113,5 +135,37 @@
                 truefalse.Show()
         End Select
         Close()
+    End Sub
+
+    Private Sub TypeComboBox_SelectedIndexChanged(sender As Object, e As EventArgs) Handles TypeComboBox.SelectedIndexChanged
+        Select Case TypeComboBox.SelectedIndex
+            Case 0 : myTest.Type = 0
+            Case 1 : myTest.Type = 1
+            Case 2 : myTest.Type = 2
+            Case 3 : myTest.Type = 3
+            Case 4 : myTest.Type = 4
+        End Select
+    End Sub
+
+    Private Sub NameTextBox_TextChanged(sender As Object, e As EventArgs) Handles NameTextBox.TextChanged
+        myTest.Name = NameTextBox.Text
+    End Sub
+
+    Private Sub RadioButton_CheckedChanged(sender As Object, e As EventArgs) Handles PublicRadioButton.CheckedChanged, OnlyPinRadioButton.CheckedChanged, NoLimitRadioButton.CheckedChanged, LimitTimeRadioButton.CheckedChanged
+        If PublicRadioButton.Checked Then
+            myTest.Access = Nothing
+        End If
+
+        If NoLimitRadioButton.Checked Then
+            myTest.Time = Nothing
+        End If
+    End Sub
+
+    Private Sub TimeTextBox_Validated(sender As Object, e As EventArgs) Handles TimeTextBox.Validated
+        If Not (Double.TryParse(TimeTextBox.Text, myTest.Time)) And TimeTextBox.Text IsNot "" Then
+            MessageBox.Show("กรุณาใส่ข้อมูลให้ถูกต้อง", "ผิดพลาด", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            TimeTextBox.Clear()
+            TimeTextBox.Focus()
+        End If
     End Sub
 End Class
