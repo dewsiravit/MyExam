@@ -36,7 +36,16 @@ Public Class RegisterForm
         Member.Password = PasswordComfirmTextBox.Text
         Member.Email = EmailTextBox.Text
         Member.Question = QuestionTextBox.Text
-        Member.Answer = AnswerTextBox.Text
+        member.Answer = AnswerTextBox.Text
+
+        For Each i As Char In member.Username.ToUpper
+            If Not (i >= "A"c And i <= "Z"c) And Not (i >= "0"c And i <= "9"c) And Not (i = "_"c Or i = "-"c Or i = "."c) Then
+                MsgBox("ชื่อผู้ใช้ต้องเป็นภาษาอังกฤษ a-z, A-Z, ตัวเลข 0-9, และเครื่องหมาย (_), (-) ,(.) เท่านั้น")
+                Exit Sub
+            End If
+        Next
+
+
         If AddMember() Then
             MessageBox.Show("สมัครสมาชิกเรียบร้อยแล้ว", "MyExam", MessageBoxButtons.OK, MessageBoxIcon.Information)
         End If
@@ -45,10 +54,10 @@ Public Class RegisterForm
     Private Function AddMember() As Boolean
         Dim stm = "INSERT INTO myexam_member(username_member, email_member, password_member, question_member, answer_member) VALUE(@username, @email, @password, @question, @answer)"
         Dim cmd As New MySqlCommand(stm, New MySqlConnection(CONNECTSTRING))
-        cmd.Parameters.AddWithValue("@username", Member.Username)
-        cmd.Parameters.AddWithValue("@email", Member.Email)
+        cmd.Parameters.AddWithValue("@username", member.Username)
+        cmd.Parameters.AddWithValue("@email", member.Email)
         cmd.Parameters.AddWithValue("@password", member.SHA256(member.Password))
-        cmd.Parameters.AddWithValue("@question", Member.Question)
+        cmd.Parameters.AddWithValue("@question", member.Question)
         cmd.Parameters.AddWithValue("@answer", member.SHA256(member.Answer))
         Try
             cmd.Connection.Open()
