@@ -5,6 +5,8 @@
     Private m_Access As String
     Private m_Time As Double
     Private m_Information As New ArrayList
+    Private m_CreateDate As Date
+    Private m_EditDate As Date
     Enum TestType
         choice
         blank
@@ -58,11 +60,30 @@
         End Set
     End Property
 
-    Public Sub addInformation(value As String)
-        m_Information.Add(value)
-    End Sub
+    Public Property CreateDate As Date
+        Get
+            Return m_CreateDate
+        End Get
+        Set(value As Date)
+            m_CreateDate = value
+        End Set
+    End Property
 
-    Public Function getInformation(index As Integer) As String
-        Return m_Information.Item(index)
-    End Function
+    Public Property EditDate As Date
+        Get
+            Return m_EditDate
+        End Get
+        Set(value As Date)
+            m_EditDate = value
+        End Set
+    End Property
+
+    Public Property Information As ArrayList
+        Get
+            Return m_Information
+        End Get
+        Set(value As ArrayList)
+            m_Information = value
+        End Set
+    End Property
 End Class

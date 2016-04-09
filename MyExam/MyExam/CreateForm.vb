@@ -9,18 +9,49 @@
         ' Add any initialization after the InitializeComponent() call.
         Me.member = member
     End Sub
+
+    Sub New(member As Member, myTest As Test)
+
+        ' This call is required by the designer.
+        InitializeComponent()
+
+        ' Add any initialization after the InitializeComponent() call.
+        Me.member = member
+        Me.myTest = myTest
+    End Sub
+
     Private Sub CreateForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        TypeComboBox.SelectedIndex = 0
-        PublicRadioButton.Checked = True
-        NoLimitRadioButton.Checked = True
-        TimeTextBox.Enabled = False
-        PinTextBox.Enabled = False
-        PinTextBox.Text = PINSUGGEST
-        VisiblePinLinkLabel.Enabled = False
+        NameTextBox.Text = myTest.Name
+        TypeComboBox.SelectedIndex = myTest.Type
+        If myTest.Access IsNot Nothing Then
+            OnlyPinRadioButton.Checked = True
+            PinTextBox.Text = myTest.Access
+        Else
+            PublicRadioButton.Checked = True
+            TimeTextBox.Enabled = False
+            PinTextBox.Enabled = False
+            PinTextBox.Text = PINSUGGEST
+            VisiblePinLinkLabel.Enabled = False
+        End If
+        If Not (myTest.Time = 0) Then
+            LimitTimeRadioButton.Checked = True
+            TimeTextBox.Text = myTest.Time
+        Else
+            NoLimitRadioButton.Checked = True
+        End If
+        If myTest.Information.Count > 0 Then
+            For Each i As String In myTest.Information
+                InformationCheckedListBox.Items.Add(i, True)
+            Next
+        Else
+            Dim item() As String = {"ชื่อผู้ใช้", "ชื่อ", "นามสกุล", "เลขประจำตัว"}
+            For Each i As String In item
+                InformationCheckedListBox.Items.Add(i)
+            Next
+            InformationCheckedListBox.SetItemChecked(0, True)
+        End If
         ErrorNameLabel.ResetText()
         ErrorAddInformationLabel.ResetText()
-        InformationCheckedListBox.SetItemChecked(0, True)
-        ActiveControl = NameTextBox
     End Sub
 
     Private Sub PinTextBox_TextClick(sender As Object, e As EventArgs) Handles PinTextBox.Click
@@ -46,9 +77,11 @@
     Private Sub LimitTimeRadioButton_CheckedChanged(sender As Object, e As EventArgs) Handles LimitTimeRadioButton.CheckedChanged
         If LimitTimeRadioButton.Checked Then
             TimeTextBox.Enabled = True
+            MinuteLabel.Enabled = True
             TimeTextBox.Focus()
         Else
             TimeTextBox.Enabled = False
+            MinuteLabel.Enabled = False
         End If
     End Sub
 
@@ -70,7 +103,6 @@
             PinTextBox.UseSystemPasswordChar = False
             VisiblePinLinkLabel.Text = "ซ่อน"
         End If
-
     End Sub
 
     Private Sub AddInformaionButton_Click(sender As Object, e As EventArgs) Handles AddInformaionButton.Click
@@ -113,25 +145,26 @@
             Exit Sub
         End Try
 
+        myTest.Information.Clear()
         For Each i As String In InformationCheckedListBox.CheckedItems
-            myTest.addInformation(i)
+            myTest.Information.Add(i)
         Next
 
         Select Case TypeComboBox.SelectedIndex
             Case 0
-                Dim choice As New CreateChoiceForm(member)
+                Dim choice As New CreateChoiceForm(member, myTest)
                 choice.Show()
             Case 1
-                Dim write As New CreateChoiceForm(member)
+                Dim write As New CreateWriteForm(member)
                 write.Show()
             Case 3
-                Dim match As New CreateChoiceForm(member)
+                Dim match As New CreateMatchForm(member)
                 match.Show()
             Case 2
-                Dim blank As New CreateChoiceForm(member)
+                Dim blank As New CreateBlankForm(member)
                 blank.Show()
             Case 4
-                Dim truefalse As New CreateChoiceForm(member)
+                Dim truefalse As New CreateTrueFalseForm(member)
                 truefalse.Show()
         End Select
         Close()

@@ -117,6 +117,7 @@ Partial Class CreateForm
         '
         'PinTextBox
         '
+        Me.PinTextBox.Enabled = False
         Me.PinTextBox.ForeColor = System.Drawing.SystemColors.WindowFrame
         Me.PinTextBox.Location = New System.Drawing.Point(368, 11)
         Me.PinTextBox.Name = "PinTextBox"
@@ -134,6 +135,7 @@ Partial Class CreateForm
         '
         'TimeTextBox
         '
+        Me.TimeTextBox.Enabled = False
         Me.TimeTextBox.Location = New System.Drawing.Point(396, 7)
         Me.TimeTextBox.Name = "TimeTextBox"
         Me.TimeTextBox.Size = New System.Drawing.Size(43, 26)
@@ -142,6 +144,7 @@ Partial Class CreateForm
         'MinuteLabel
         '
         Me.MinuteLabel.AutoSize = True
+        Me.MinuteLabel.Enabled = False
         Me.MinuteLabel.Location = New System.Drawing.Point(445, 10)
         Me.MinuteLabel.Name = "MinuteLabel"
         Me.MinuteLabel.Size = New System.Drawing.Size(35, 20)
@@ -183,7 +186,6 @@ Partial Class CreateForm
         '
         Me.InformationCheckedListBox.CheckOnClick = True
         Me.InformationCheckedListBox.FormattingEnabled = True
-        Me.InformationCheckedListBox.Items.AddRange(New Object() {"ชื่อผู้ใช้", "ชื่อ", "นามสกุล", "เลขประจำตัว"})
         Me.InformationCheckedListBox.Location = New System.Drawing.Point(125, 166)
         Me.InformationCheckedListBox.Name = "InformationCheckedListBox"
         Me.InformationCheckedListBox.Size = New System.Drawing.Size(513, 109)
@@ -282,6 +284,7 @@ Partial Class CreateForm
         'VisiblePinLinkLabel
         '
         Me.VisiblePinLinkLabel.AutoSize = True
+        Me.VisiblePinLinkLabel.Enabled = False
         Me.VisiblePinLinkLabel.Location = New System.Drawing.Point(502, 14)
         Me.VisiblePinLinkLabel.Name = "VisiblePinLinkLabel"
         Me.VisiblePinLinkLabel.Size = New System.Drawing.Size(35, 20)
