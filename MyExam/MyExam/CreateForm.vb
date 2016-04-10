@@ -139,7 +139,7 @@
                 Throw New Exception("กรุณาใส่รหัสเพื่อเข้าถึงแบบทดสอบ")
             ElseIf InformationCheckedListBox.CheckedItems.Count = 0 Then
                 Throw New Exception("กรุณาเลือกข้อมูลผู้เข้าสอบอย่างน้อย 1 รายการ")
-            ElseIf myTest.Time = 0 And LimitTimeRadioButton.Enabled Then
+            ElseIf myTest.Time = 0 And LimitTimeRadioButton.Checked Then
                 Throw New Exception("กรุณาใส่เวลาในการทำแบบทดสอบ")
             End If
         Catch ex As Exception

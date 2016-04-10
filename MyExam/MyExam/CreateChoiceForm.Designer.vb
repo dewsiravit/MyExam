@@ -30,7 +30,7 @@ Partial Class CreateChoiceForm
         Me.SaveButton = New System.Windows.Forms.Button()
         Me.NextButton = New System.Windows.Forms.Button()
         Me.BackButton = New System.Windows.Forms.Button()
-        Me.QurstionRichTextBox = New System.Windows.Forms.RichTextBox()
+        Me.QuestionRichTextBox = New System.Windows.Forms.RichTextBox()
         Me.ChoiceARichTextBox = New System.Windows.Forms.RichTextBox()
         Me.ChoiceBRichTextBox = New System.Windows.Forms.RichTextBox()
         Me.ChoiceCRichTextBox = New System.Windows.Forms.RichTextBox()
@@ -140,13 +140,13 @@ Partial Class CreateChoiceForm
         Me.BackButton.Text = "ย้อนกลับ"
         Me.BackButton.UseVisualStyleBackColor = True
         '
-        'QurstionRichTextBox
+        'QuestionRichTextBox
         '
-        Me.QurstionRichTextBox.Location = New System.Drawing.Point(25, 78)
-        Me.QurstionRichTextBox.Name = "QurstionRichTextBox"
-        Me.QurstionRichTextBox.Size = New System.Drawing.Size(646, 65)
-        Me.QurstionRichTextBox.TabIndex = 25
-        Me.QurstionRichTextBox.Text = ""
+        Me.QuestionRichTextBox.Location = New System.Drawing.Point(25, 78)
+        Me.QuestionRichTextBox.Name = "QuestionRichTextBox"
+        Me.QuestionRichTextBox.Size = New System.Drawing.Size(646, 65)
+        Me.QuestionRichTextBox.TabIndex = 25
+        Me.QuestionRichTextBox.Text = ""
         '
         'ChoiceARichTextBox
         '
@@ -188,7 +188,7 @@ Partial Class CreateChoiceForm
         Me.Controls.Add(Me.ChoiceCRichTextBox)
         Me.Controls.Add(Me.ChoiceBRichTextBox)
         Me.Controls.Add(Me.ChoiceARichTextBox)
-        Me.Controls.Add(Me.QurstionRichTextBox)
+        Me.Controls.Add(Me.QuestionRichTextBox)
         Me.Controls.Add(Me.BackButton)
         Me.Controls.Add(Me.NextButton)
         Me.Controls.Add(Me.SaveButton)
@@ -213,7 +213,7 @@ Partial Class CreateChoiceForm
         Me.Controls.SetChildIndex(Me.SaveButton, 0)
         Me.Controls.SetChildIndex(Me.NextButton, 0)
         Me.Controls.SetChildIndex(Me.BackButton, 0)
-        Me.Controls.SetChildIndex(Me.QurstionRichTextBox, 0)
+        Me.Controls.SetChildIndex(Me.QuestionRichTextBox, 0)
         Me.Controls.SetChildIndex(Me.ChoiceARichTextBox, 0)
         Me.Controls.SetChildIndex(Me.ChoiceBRichTextBox, 0)
         Me.Controls.SetChildIndex(Me.ChoiceCRichTextBox, 0)
@@ -234,7 +234,7 @@ Partial Class CreateChoiceForm
     Friend WithEvents SaveButton As Button
     Friend WithEvents NextButton As Button
     Friend WithEvents BackButton As Button
-    Friend WithEvents QurstionRichTextBox As RichTextBox
+    Friend WithEvents QuestionRichTextBox As RichTextBox
     Friend WithEvents ChoiceARichTextBox As RichTextBox
     Friend WithEvents ChoiceBRichTextBox As RichTextBox
     Friend WithEvents ChoiceCRichTextBox As RichTextBox
