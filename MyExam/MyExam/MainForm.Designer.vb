@@ -30,8 +30,12 @@ Partial Class MainForm
         Me.ListView = New System.Windows.Forms.ListView()
         Me.NameColumnHeader = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.TypeColumnHeader = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.TimeColumnHeader = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.AccessColumnHeader = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.CreatorColumnHeader = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.DateColumnHeader = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.EditColumnHeader = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.NoColumnHeader = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.SearchGroupBox.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -121,7 +125,7 @@ Partial Class MainForm
         '
         'ListView
         '
-        Me.ListView.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.NameColumnHeader, Me.TypeColumnHeader, Me.CreatorColumnHeader, Me.DateColumnHeader})
+        Me.ListView.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.NoColumnHeader, Me.NameColumnHeader, Me.TypeColumnHeader, Me.TimeColumnHeader, Me.AccessColumnHeader, Me.CreatorColumnHeader, Me.DateColumnHeader, Me.EditColumnHeader})
         Me.ListView.Location = New System.Drawing.Point(16, 159)
         Me.ListView.Name = "ListView"
         Me.ListView.Size = New System.Drawing.Size(652, 290)
@@ -132,22 +136,48 @@ Partial Class MainForm
         'NameColumnHeader
         '
         Me.NameColumnHeader.Text = "ชื่อ"
-        Me.NameColumnHeader.Width = 326
+        Me.NameColumnHeader.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        Me.NameColumnHeader.Width = 201
         '
         'TypeColumnHeader
         '
         Me.TypeColumnHeader.Text = "ประเภท"
-        Me.TypeColumnHeader.Width = 124
+        Me.TypeColumnHeader.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        Me.TypeColumnHeader.Width = 76
+        '
+        'TimeColumnHeader
+        '
+        Me.TimeColumnHeader.Text = "เวลา (นาที)"
+        Me.TimeColumnHeader.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        Me.TimeColumnHeader.Width = 89
+        '
+        'AccessColumnHeader
+        '
+        Me.AccessColumnHeader.Text = "การเข้าถึง"
+        Me.AccessColumnHeader.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        Me.AccessColumnHeader.Width = 76
         '
         'CreatorColumnHeader
         '
         Me.CreatorColumnHeader.Text = "ผู้สร้าง"
-        Me.CreatorColumnHeader.Width = 107
+        Me.CreatorColumnHeader.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        Me.CreatorColumnHeader.Width = 84
         '
         'DateColumnHeader
         '
         Me.DateColumnHeader.Text = "วันที่สร้าง"
-        Me.DateColumnHeader.Width = 91
+        Me.DateColumnHeader.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        Me.DateColumnHeader.Width = 98
+        '
+        'EditColumnHeader
+        '
+        Me.EditColumnHeader.Text = "แก้ไขล่าสุด"
+        Me.EditColumnHeader.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        Me.EditColumnHeader.Width = 86
+        '
+        'NoColumnHeader
+        '
+        Me.NoColumnHeader.Text = "No."
         '
         'MainForm
         '
@@ -181,4 +211,8 @@ Partial Class MainForm
     Friend WithEvents CreatorColumnHeader As ColumnHeader
     Friend WithEvents AdvanceSearchLinkLabel As LinkLabel
     Friend WithEvents DateColumnHeader As ColumnHeader
+    Friend WithEvents TimeColumnHeader As ColumnHeader
+    Friend WithEvents AccessColumnHeader As ColumnHeader
+    Friend WithEvents EditColumnHeader As ColumnHeader
+    Friend WithEvents NoColumnHeader As ColumnHeader
 End Class

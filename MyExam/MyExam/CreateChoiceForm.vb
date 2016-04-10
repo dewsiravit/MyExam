@@ -84,8 +84,7 @@ Public Class CreateChoiceForm
             AddData()
             Try
                 Dim stm As String = "INSERT INTO myexam_test(id_member, name_test, type_test, access_test, time_test, createdate_test) VALUES(@id, @name, @type, @access, @time, @date)"
-                Dim conn As New MySqlConnection(CONNECTSTRING)
-                Dim cmd As New MySqlCommand(stm, conn)
+                Dim cmd As New MySqlCommand(stm, New MySqlConnection(CONNECTSTRING))
                 cmd.Parameters.AddWithValue("@id", member.ID)
                 cmd.Parameters.AddWithValue("@name", myTest.Name)
                 cmd.Parameters.AddWithValue("@type", myTest.Type.ToString)
