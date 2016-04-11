@@ -23,6 +23,55 @@ Public Class MainForm
         Dim cmd As New MySqlCommand(stm, New MySqlConnection(CONNECTSTRING))
         cmd.Connection.Open()
         Dim result As MySqlDataReader = cmd.ExecuteReader()
+        ShowData(result)
+        cmd.Connection.Close()
+    End Sub
+
+    Private Sub SearchButton_Click(sender As Object, e As EventArgs) Handles SearchButton.Click
+        SearchTextBox.Focus()
+        ListView.Items.Clear()
+        Dim stm As String
+        Dim str As String = SearchTextBox.Text
+        If NameRadioButton.Checked Then
+            stm = "SELECT * FROM myexam_test WHERE name_test LIKE @str"
+            str += "%"
+        Else
+            stm = "SELECT * FROM myexam_test WHERE id_member = @str"
+            str = FindID(str)
+        End If
+        Dim cmd As New MySqlCommand(stm, New MySqlConnection(CONNECTSTRING))
+        cmd.Parameters.AddWithValue("@str", str)
+        cmd.Connection.Open()
+        Dim result As MySqlDataReader = cmd.ExecuteReader()
+        ShowData(result)
+        cmd.Connection.Close()
+    End Sub
+
+    Private Function FindUsername(id As Integer) As String
+        Dim stm As String = "SELECT id_member, username_member FROM myexam_member WHERE id_member = @id"
+        Dim cmd As New MySqlCommand(stm, New MySqlConnection(CONNECTSTRING))
+        cmd.Parameters.AddWithValue("@id", id)
+        cmd.Connection.Open()
+        Dim result As MySqlDataReader = cmd.ExecuteReader()
+        result.Read()
+        Dim username As String = result.Item("username_member")
+        cmd.Connection.Close()
+        Return username
+    End Function
+
+    Private Function FindID(name As String) As Integer
+        Dim stm As String = "SELECT id_member, username_member FROM myexam_member WHERE username_member = @name"
+        Dim cmd As New MySqlCommand(stm, New MySqlConnection(CONNECTSTRING))
+        cmd.Parameters.AddWithValue("@name", name)
+        cmd.Connection.Open()
+        Dim result As MySqlDataReader = cmd.ExecuteReader()
+        result.Read()
+        Dim id As Integer = result.Item("id_member")
+        cmd.Connection.Close()
+        Return id
+    End Function
+
+    Private Sub ShowData(result As MySqlDataReader)
         Dim i As Integer = 0
         While result.Read
             ListView.Items.Add(result.Item("id_test"))
@@ -44,14 +93,15 @@ Public Class MainForm
             Else
                 ListView.Items(i).SubItems.Add("จำกัด")
             End If
-            ListView.Items(i).SubItems.Add(result.Item("createdate_test"))
-            ListView.Items(i).SubItems.Add(result.Item("editdate_test").ToString)
+            ListView.Items(i).SubItems.Add(FindUsername(result.Item("id_member")))
+            Dim myDate As Date
+            myDate = result.Item("createdate_test")
+            ListView.Items(i).SubItems.Add(myDate.ToString("dd-MM-yyyy"))
+            If Not IsDBNull(result.Item("editdate_test")) Then
+                myDate = result.Item("editdate_test")
+                ListView.Items(i).SubItems.Add(myDate.ToString("dd-MM-yyyy"))
+            End If
             i += 1
         End While
-        cmd.Connection.Close()
-    End Sub
-
-    Private Sub SearchButton_Click(sender As Object, e As EventArgs) Handles SearchButton.Click
-        SearchTextBox.Focus()
     End Sub
 End Class

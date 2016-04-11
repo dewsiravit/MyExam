@@ -28,6 +28,7 @@ Partial Class MainForm
         Me.SearchTextBox = New System.Windows.Forms.TextBox()
         Me.CreateButton = New System.Windows.Forms.Button()
         Me.ListView = New System.Windows.Forms.ListView()
+        Me.NoColumnHeader = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.NameColumnHeader = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.TypeColumnHeader = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.TimeColumnHeader = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
@@ -35,7 +36,6 @@ Partial Class MainForm
         Me.CreatorColumnHeader = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.DateColumnHeader = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.EditColumnHeader = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
-        Me.NoColumnHeader = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.SearchGroupBox.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -126,12 +126,17 @@ Partial Class MainForm
         'ListView
         '
         Me.ListView.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.NoColumnHeader, Me.NameColumnHeader, Me.TypeColumnHeader, Me.TimeColumnHeader, Me.AccessColumnHeader, Me.CreatorColumnHeader, Me.DateColumnHeader, Me.EditColumnHeader})
+        Me.ListView.FullRowSelect = True
         Me.ListView.Location = New System.Drawing.Point(16, 159)
         Me.ListView.Name = "ListView"
         Me.ListView.Size = New System.Drawing.Size(652, 290)
         Me.ListView.TabIndex = 8
         Me.ListView.UseCompatibleStateImageBehavior = False
         Me.ListView.View = System.Windows.Forms.View.Details
+        '
+        'NoColumnHeader
+        '
+        Me.NoColumnHeader.Text = "No."
         '
         'NameColumnHeader
         '
@@ -174,10 +179,6 @@ Partial Class MainForm
         Me.EditColumnHeader.Text = "แก้ไขล่าสุด"
         Me.EditColumnHeader.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         Me.EditColumnHeader.Width = 86
-        '
-        'NoColumnHeader
-        '
-        Me.NoColumnHeader.Text = "No."
         '
         'MainForm
         '
