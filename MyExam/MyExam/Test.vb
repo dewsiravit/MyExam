@@ -2,7 +2,6 @@
     Private m_ID As Integer
     Private m_Name As String
     Private m_Type As TestType
-    Private m_TypeTH As String
     Private m_Access As String
     Private m_Time As Double
     Private m_Information As New ArrayList
@@ -85,15 +84,6 @@
         End Get
         Set(value As ArrayList)
             m_Information = value
-        End Set
-    End Property
-
-    Public Property TypeTH As String
-        Get
-            Return m_TypeTH
-        End Get
-        Set(value As String)
-            m_TypeTH = value
         End Set
     End Property
 End Class
