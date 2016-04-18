@@ -178,6 +178,7 @@
     <Compile Include="RegisterForm.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="ShowTest.vb" />
     <Compile Include="Test.vb" />
     <Compile Include="TestChoice.vb" />
   </ItemGroup>

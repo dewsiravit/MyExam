@@ -53,8 +53,10 @@ Public Class MainForm
         cmd.Parameters.AddWithValue("@id", id)
         cmd.Connection.Open()
         Dim result As MySqlDataReader = cmd.ExecuteReader()
-        result.Read()
-        Dim username As String = result.Item("username_member")
+        Dim username As String
+        If result.Read() Then
+            username = result.Item("username_member")
+        End If
         cmd.Connection.Close()
         Return username
     End Function
@@ -65,8 +67,10 @@ Public Class MainForm
         cmd.Parameters.AddWithValue("@name", name)
         cmd.Connection.Open()
         Dim result As MySqlDataReader = cmd.ExecuteReader()
-        result.Read()
-        Dim id As Integer = result.Item("id_member")
+        Dim id As Integer
+        If result.Read() Then
+            id = result.Item("id_member")
+        End If
         cmd.Connection.Close()
         Return id
     End Function
